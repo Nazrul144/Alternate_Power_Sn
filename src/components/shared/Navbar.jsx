@@ -29,7 +29,8 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className="navbar bg-gray-200">
+    <div className="bg-base-100 ">
+      <div className="navbar container mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -45,22 +46,27 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <Image src="/Group.svg" alt="Logo" width={100} height={100} />
+        <Link href='/'>
+        <Image src="/Group.svg" alt="Logo" width={100} height={60} />
+        </Link>
       </div>
-      <div className="navbar-center hidden lg:flex ">
-        <ul className="menu menu-horizontal px-1 flex gap-4 text-xl font-bold">
+      <div className="navbar-center hidden lg:flex  ">
+        <ul className="menu menu-horizontal px-1 flex gap-4 text-xl font-bold ">
           {links?.map((link) => (
-            <Link className={`${pathName == link.path ? "text-sky-400" : ""}`} key={link.path} href={link.path}>
+            <Link className={` hover:text-primary duration-300 ${pathName == link.path ? "text-primary" : ""}`} key={link.path} href={link.path}>
               {link.title}
             </Link>
           ))}
         </ul>
       </div>
-      <div className="navbar-end space-x-6">
-        <SlHandbag className="text-xl" />
+      <div className="navbar-end ">
+          <div className="flex space-x-3 items-center">
+          <SlHandbag className="text-xl" />
         <IoSearchOutline className="text-xl" />
-        <a className="btn text-primary border border-primary rounded-lg">Appointment</a>
+        <button className="btn text-primary btn-outline">Appointment</button>
+          </div>
       </div>
+    </div>
     </div>
   );
 };

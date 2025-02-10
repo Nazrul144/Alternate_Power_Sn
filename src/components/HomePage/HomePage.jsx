@@ -1,10 +1,12 @@
-import Home from '@/components/HomePage/Home';
 import React from 'react';
+import Banner from './Banner';
+import About from './About';
 
 const HomePage = () => {
     return (
         <div>
-            <Home/>
+            <Banner/>
+            <About/>
         </div>
     );
 }
