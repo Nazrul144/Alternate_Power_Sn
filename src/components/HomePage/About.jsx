@@ -7,7 +7,7 @@ const About = () => {
                 <div>
                     Image
                 </div>
-                <div>
+                <div className='font-sans'>
                     Content
                 </div>
             </div>

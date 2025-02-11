@@ -21,10 +21,10 @@ const Banner = () => {
              </div>
           </div>
            <div className="absolute flex bottom-12 right-12 space-x-4 ">
-             <a href={slide.prev}className="btn btn-circle">
+             <a href={slide.prev}className="btn btn-circle bg-primary outline-none text-white">
                ❮
              </a>
-             <a href={slide.next} className="btn btn-circle">
+             <a href={slide.next} className="btn btn-circle bg-primary outline-none text-white">
                ❯
              </a>
            </div>
