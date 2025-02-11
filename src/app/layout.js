@@ -2,8 +2,7 @@ import { Geist, Geist_Mono, Roboto, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
-
-
+import AuthProvider from "@/services/AuthProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,13 +33,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="carDoctorTheme">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} antialiased`}>
-        <div>
-          <Navbar/>
-          {children}
-          <Footer/>
-        </div>
-      </body>
+      <AuthProvider>
+        <body className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} antialiased`}>
+          <div>
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
+        </body>
+      </AuthProvider>
     </html>
   );
 }

@@ -47,7 +47,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link href='/'>
-        <Image src="/Group.svg" alt="Logo" width={100} height={60} />
+        <Image className="hidden lg:block" src="/Group.svg" alt="Logo" width={100} height={60} />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex  ">
@@ -64,6 +64,7 @@ const Navbar = () => {
           <SlHandbag className="text-xl" />
         <IoSearchOutline className="text-xl" />
         <button className="btn text-primary btn-outline">Appointment</button>
+        <button className="btn btn-primary text-white font-bold">Login</button>
           </div>
       </div>
     </div>
