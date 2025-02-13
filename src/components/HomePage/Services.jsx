@@ -3,7 +3,7 @@ import {services} from '../../lib/services'
 import ServiceCard from '../cards/ServiceCard';
 
 const Services = () => {
-    console.log(services);
+    console.log("this is services", services);
     return (
         <div >
             <div className='container mx-auto text-center'>
@@ -18,7 +18,9 @@ const Services = () => {
                     ))
                 }
             </div>
-            
+            <div className='flex justify-center mt-8'>
+            <button className='btn btn-primary btn-outline flex justify-center hover:text-white'>More Services</button> 
+            </div>
         </div>
     );
 }
