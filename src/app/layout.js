@@ -20,10 +20,6 @@ const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"], // Specify the weights you need
   subsets: ["latin"], // Specify the subsets you need
 });
-// const poppins = Poppins({
-//   weight: '400',
-//   subsets: ['latin'],
-// })
 
 export const metadata = {
   title: "Car Doctor",
