@@ -64,7 +64,9 @@ const Navbar = () => {
           <SlHandbag className="text-xl" />
         <IoSearchOutline className="text-xl" />
         <button className="btn text-primary btn-outline">Appointment</button>
+        <Link href={'/login'}>
         <button className="btn btn-primary text-white font-bold">Login</button>
+        </Link>
           </div>
       </div>
     </div>

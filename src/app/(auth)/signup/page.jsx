@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
+import { stringify } from "postcss";
 import React from "react";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
@@ -9,9 +10,34 @@ import { FaGithub } from "react-icons/fa";
 
 
 const Page = () => {
-    const handleRegister = async()=>{
-
+  const handleRegister = async(event)=>{
+    event.preventDefault()
+    const newUser = {
+      name : event.target.name.value,
+      email : event.target.email.value,
+      password : event.target.password.value
     }
+    
+    try {
+      const response = await fetch('signup/api', {
+        method: "POST",
+        headers:{
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newUser)
+      })
+      const result = await response.json()
+      if(response.ok){
+        alert(result.message)
+      }else{
+        alert(result.message)
+      }
+    } catch (error) {
+        console.log(error.message);
+    }
+
+  }
+
   return (
     <div className="container mx-auto py-24 lg:px-24 ">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

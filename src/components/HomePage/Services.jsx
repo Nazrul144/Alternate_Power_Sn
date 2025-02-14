@@ -3,7 +3,7 @@ import {services} from '../../lib/services'
 import ServiceCard from '../cards/ServiceCard';
 
 const Services = () => {
-    console.log("this is services", services);
+
     return (
         <div >
             <div className='container mx-auto text-center'>

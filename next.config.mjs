@@ -2,7 +2,10 @@
 const nextConfig = {
     images: {
         domains: ['i.ibb.co', 'i.ibb.co.com']
-    }  
+    },
+    env: {
+        MONGODB_URI: process.env.MONGODB_URI,
+      },
 };
 
 export default nextConfig;

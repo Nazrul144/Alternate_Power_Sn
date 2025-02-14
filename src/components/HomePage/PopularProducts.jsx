@@ -3,7 +3,7 @@ import {products} from '../../lib/products';
 import ProductsCard from '../cards/ProductsCard';
 
 const PopularProducts = () => {
-    console.log("this is product", products);
+ 
     return (
         <div className='container mx-auto'>
             <div>
