@@ -27,6 +27,9 @@ const Page = () => {
         body: JSON.stringify(newUser)
       })
       const result = await response.json()
+      if(response.status === 201){
+        event.target.reset()
+      }
       if(response.ok){
         alert(result.message)
       }else{
