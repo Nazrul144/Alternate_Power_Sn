@@ -1,4 +1,5 @@
 'use client'
+import { redirect } from "next/dist/server/api-utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -6,11 +7,20 @@ import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import {signIn} from 'next-auth/react'
 
 
 const Page = () => {
-    const handleLogin = async()=>{
-
+    const handleLogin = async(event)=>{
+      event.preventDefault()
+      const email = event.target.email.value
+      const password = event.target.password.value
+      const res = signIn('credentials', {
+        email, 
+        password,
+        redirect: false
+      })
+      console.log(res);
     }
   return (
     <div className="container mx-auto py-24 lg:px-24 ">
