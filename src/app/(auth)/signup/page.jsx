@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
-import { stringify } from "postcss";
+
 import React from "react";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";

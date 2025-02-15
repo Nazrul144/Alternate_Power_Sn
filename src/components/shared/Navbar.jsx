@@ -1,4 +1,5 @@
 "use client";
+import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -6,28 +7,8 @@ import { IoSearchOutline } from "react-icons/io5";
 import { SlHandbag } from "react-icons/sl";
 const Navbar = () => {
   const pathName = usePathname();
-  const links = [
-    {
-      title: "Home",
-      path: "/home",
-    },
-    {
-      title: "About",
-      path: "/about",
-    },
-    {
-      title: "Services",
-      path: "/services",
-    },
-    {
-      title: "Blog",
-      path: "/blog",
-    },
-    {
-      title: "Contact",
-      path: "/contact",
-    },
-  ];
+      const session = useSession();
+      console.log(session);
   return (
     <div className="bg-base-100 ">
       <div className="navbar container mx-auto">
@@ -65,7 +46,7 @@ const Navbar = () => {
         <IoSearchOutline className="text-xl" />
         <button className="btn text-primary btn-outline">Appointment</button>
         <Link href={'/login'}>
-        <button className="btn btn-primary text-white font-bold">Login</button>
+        { session.data ? <button onClick={()=> signOut()} className="btn btn-primary text-white font-bold">Logout</button> : <button className="btn btn-primary text-white font-bold">Login</button>}
         </Link>
           </div>
       </div>
@@ -73,5 +54,28 @@ const Navbar = () => {
     </div>
   );
 };
+
+const links = [
+  {
+    title: "Home",
+    path: "/home",
+  },
+  {
+    title: "About",
+    path: "/about",
+  },
+  {
+    title: "Services",
+    path: "/services",
+  },
+  {
+    title: "Blog",
+    path: "/blog",
+  },
+  {
+    title: "Contact",
+    path: "/contact",
+  },
+];
 
 export default Navbar;
