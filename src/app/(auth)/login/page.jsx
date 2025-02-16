@@ -1,14 +1,10 @@
 'use client'
-import { redirect } from "next/dist/server/api-utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaGoogle } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
 import {signIn} from 'next-auth/react'
 import { useRouter } from "next/navigation";
+import SocialSignin from "@/components/shared/SocialSignin";
 
 
 const Page = () => {
@@ -50,20 +46,7 @@ const Page = () => {
             <br /> <br />
             <button type="submit" className="btn btn-primary w-full text-white">Login</button>
             <h1 className="mt-4 text-center">Or Sign with</h1>
-            <div className="flex gap-4 justify-center mt-4">
-              <button>
-                <FaGoogle className="text-xl" />
-              </button>
-              <button>
-                <FaFacebook className="text-xl" />
-              </button>
-              <button>
-                <FaGithub className="text-xl" />
-              </button>
-              <button>
-                <FaLinkedinIn className="text-xl" />
-              </button>
-            </div>
+            <SocialSignin/>
             <p className="text-center mt-4 text-sm">
               Don't have an account?
               <Link href={"/signup"} className="text-primary font-bold">
