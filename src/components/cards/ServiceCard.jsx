@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 const ServiceCard = ({service}) => {
-  const {title, img, price} = service;
+  const {title, img, price, _id} = service;
   return (
     <div>
       <div className="card bg-base-100 w-96 shadow-xl badge-outline border border-gray-200 rounded-lg">
@@ -19,7 +19,7 @@ const ServiceCard = ({service}) => {
           <h2 className="card-title">{title}</h2>
          <div className="flex items-center">
          <p className="text-primary">${price}</p>
-         <Link href={'/'}><Image src='/Vector.png' alt="Arrow" width={20} height={20}/></Link>
+         <Link href={`services/${_id}`}><Image src='/Vector.png' alt="Arrow" width={20} height={20}/></Link>
          </div>
         </div>
       </div>
