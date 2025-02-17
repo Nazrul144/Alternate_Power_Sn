@@ -1,14 +1,23 @@
+import { getServicesDetails } from "@/services/getServicesAll";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Page = () => {
+
+export const metadata = {
+  title: "Service Details",
+  description: "Service Details page"
+}
+
+const Page = async({params}) => {
+  const details = await getServicesDetails(params.id)
+  const {title, img, price, description, facility} = details.service;
   return (
     <div className="container mx-auto">
       {/*Banner Section*/}
-      <div className="bg-red-400 rounded-lg h-60">
-        <h1 className="pt-24 px-24 font-bold text-white text-2xl lg:text-4xl">Service Details</h1>
-        <div className="flex justify-center mt-20 lg:mt-16 p-1  bg-[#FF3811] rounded-t-full font-bold text-xl text-white w-56 mx-auto ">
+      <div className="bg-red-400 rounded-lg h-60 bg-cover bg-no-repeat bg-center"  style={{ backgroundImage: `url(${img})` }}>
+        <h1 className="pt-24 px-24 font-bold text-white text-2xl lg:text-4xl">Service Details of {title}</h1>
+        <div className="flex justify-center mt-[55px] lg:mt-[85px] p-1  bg-[#FF3811] rounded-t-full font-bold text-xl text-white w-56 mx-auto ">
           <Link href={"/"}>Home/</Link>
           <Link href={"#"}>Service Details</Link>
         </div>
@@ -18,7 +27,7 @@ const Page = () => {
         <div className="lg:w-[1300px] h-96 ">
           <Image
             className="rounded-lg object-cover w-full h-full"
-            src="/assets/images/banner/4.jpg"
+            src={img}
             alt="Image"
             width={800}
             height={500}
@@ -74,27 +83,21 @@ const Page = () => {
       <div>
         <div className="flex flex-col md:flex-row justify-between gap-6">
           <div className="lg:w-[80%] ">
-            <h1 className="px-4 text-justify">
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some
-              form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a
-              passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.{" "}
-            </h1>
+            <h1 className="px-4 text-justify"> {description}</h1>
 
             <div className="grid lg:grid-cols-2 gap-2 mt-4">
-              {demoCard?.map((demo) => (
+              {facility?.map((demo) => (
                 <div key={demo.name} className="card bg-orange-50 border-2 border-t-[#FF3811] w-96 shadow-xl">
                   <div className="card-body">
                     <h2>{demo.name}</h2>
-                    <p>{demo.description}</p>
+                    <p>{demo.details}</p>
                   </div>
                 </div>
               ))}
             </div>
             <div>
               <p className="mt-4 px-4 text-justify ">
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some
-                form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a
-                passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.{" "}
+                {description}
               </p>
             </div>
           </div>
@@ -144,9 +147,7 @@ const Page = () => {
         <div className="lg:w-[70%]">
           <h1 className="text-2xl font-bold px-2">3 Simple Steps to Process</h1>
           <p className="text-justify px-2">
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some
-            form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a
-            passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text
+            {description}
           </p>
           <div className="grid lg:grid-cols-3 gap-6 rounded-lg">
             {demoNumber?.map((card, index) => (
@@ -161,13 +162,13 @@ const Page = () => {
           </div>
         </div>
         <div className="lg:w-[30%]">
-          <h1 className="font-bold lg:text-2xl text-black mb-2">Price $250.00</h1>
+          <h1 className="font-bold lg:text-2xl text-black mb-2">Price $ {price}</h1>
           <button className="btn btn-primary text-white lg:w-full">Proceed Checkout</button>
         </div>
       </div>
         <div className="mt-10 lg:w-[90%]">
             <Image className="rounded-lg object-cover object-top h-96"
-            src="/assets/images/banner/2.jpg" alt="Banner" width={800} height={600} />
+            src={img} alt="Banner" width={800} height={600} />
           </div>
     </div>
   );
@@ -175,24 +176,6 @@ const Page = () => {
 
 export default Page;
 
-const demoCard = [
-  {
-    name: "Nazrul Islam",
-    description: "A passionate web developer specializing in MERN stack.",
-  },
-  {
-    name: "Book Store",
-    description: "An online platform for buying and selling books.",
-  },
-  {
-    name: "Deep Learning Model",
-    description: "A hybrid intrusion detection system using CNN and RNN.",
-  },
-  {
-    name: "Graphic Design",
-    description: "Creating stunning visuals and brand identities.",
-  },
-];
 
 const demoNumber = [
     {

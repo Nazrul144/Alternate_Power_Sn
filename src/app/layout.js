@@ -22,7 +22,10 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "Car Doctor",
+  title: {
+    default: "Car Doctor",
+    template: "%s | Car Doctor", 
+  },
   description: "Car Repairing Workshop",
 };
 
