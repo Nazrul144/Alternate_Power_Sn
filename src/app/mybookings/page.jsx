@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { MdDelete } from "react-icons/md";
-
+import { FaEdit } from "react-icons/fa";
 
 const Page = () => {
 
@@ -17,11 +17,20 @@ const Page = () => {
         setBookings(data)
     }
 
-    console.log(bookings);
- 
     useEffect(()=>{
         loadData();
     },[session])
+
+    {/*Delete*/}
+    const handleDelete = async(id)=>{
+      const deleted = await fetch(`http://localhost:3000/mybookings/api/delete-booking/${id}`, {
+        method: "DELETE"
+      })
+      const res = await deleted.json()
+      if(res.response.deletedCount > 0){
+        loadData()
+      }
+    }
 
   return (
     <div className="container mx-auto">
@@ -60,13 +69,18 @@ const Page = () => {
     <tbody>
       {/* row 1 */}
       {
-        bookings?.map((booking)=>(
-        <tr key={booking._id} className="bg-base-200">
-        <th>1</th>
+        bookings?.map((booking, index)=>(
+        <tr key={booking._id} className="bg-base-200 rounded-lg">
+        <th>{index + 1}</th>
         <td>{booking.service.title}</td>
         <td>{booking.service.price}</td>
         <td>{booking.data}</td>
-        <td><button className=""><MdDelete className="text-2xl ml-2 text-red-600" /></button></td>
+        <td>
+          <div className="flex space-x-4">
+          <button className=""><FaEdit className="text-2xl  text-[#007bff]" /></button>
+          <button onClick={()=> handleDelete(booking._id)} className=""><MdDelete className="text-2xl  text-red-600" /></button>
+          </div>
+        </td>
       </tr>
         ))
       }
