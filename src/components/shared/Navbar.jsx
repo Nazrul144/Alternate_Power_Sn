@@ -68,6 +68,10 @@ const links = [
     path: "/services",
   },
   {
+    title: "MyBookings",
+    path: "/mybookings",
+  },
+  {
     title: "Blog",
     path: "/blog",
   },

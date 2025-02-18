@@ -3,16 +3,17 @@ import React, { useEffect, useState } from "react";
 import { getServicesDetails } from "@/services/getServicesAll";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
+import { stringify } from "postcss";
 
 const Checkout =  ({ params }) => {
     const {data} = useSession()
-    const [item, setItem] = useState({})
+    const [service, setService] = useState({})
 
  const loadService = async()=>{
   const details = await getServicesDetails(params.id);
-  setItem(details)
+  setService(details)
     }
-    const { title, price, img } = item.service || {};
+    const { title, price, img } = service.service || {};
     
 
    useEffect(()=>{
@@ -22,14 +23,24 @@ const Checkout =  ({ params }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const formData = {
-        name : event.target.name.value,
+    const newBooking = {
+        name : data?.user?.name,
+        email : data?.user?.email,
         data : event.target.date.value,
-        email : event.target.email.value,
         address : event.target.address.value,
-        amount : event.target.amount.value,
+        phone : event.target.phone.value,
+        ...service
     }
-    console.log(formData);
+    console.log("newBooking", newBooking);
+    const res = await fetch('http://localhost:3000/checkout/new-booking', {
+      method: "POST",
+      headers:{
+        "Content-Type" : "Application/json"
+      },
+      body: JSON.stringify(newBooking)
+    })
+    console.log(res);
+    
   };
 
   return (
@@ -47,12 +58,12 @@ const Checkout =  ({ params }) => {
       <div className="bg-[#F3F3F3] p-12 my-12 rounded-lg lg:px-32 ">
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-2 gap-5 w-full">
-            <input className="px-4 py-2 rounded-lg outline-none" type="text" name="name" defaultValue={data?.user?.name} placeholder="Your Name" />
-            <input className="px-4 py-2 rounded-lg outline-none" type="date" defaultValue={new Date().getDate()} name="date" placeholder="Date" />
-            <input className="px-4 py-2 rounded-lg outline-none" type="text" defaultValue={data?.user?.email}  name="email" placeholder="Your Email" />
-            <input className="px-4 py-2 rounded-lg outline-none" type="text" name="number" placeholder="Your Phone" />
+            <input className="px-4 py-2 rounded-lg outline-none" type="text" defaultValue={data?.user?.name} placeholder="Your Name" />
+            <input className="px-4 py-2 rounded-lg outline-none"  defaultValue={new Date().toISOString().split("T")[0]} type="date"  name="date" placeholder="Date" />
+            <input className="px-4 py-2 rounded-lg outline-none" type="text" defaultValue={data?.user?.email} placeholder="Your Email" />
+            <input className="px-4 py-2 rounded-lg outline-none" type="number" name="phone" placeholder="Your Phone" />
             <input className="px-4 py-2 rounded-lg outline-none" type="text" name="address" placeholder="Present Address" />
-            <input className="px-4 py-2 rounded-lg outline-none" type="text" defaultValue={price}  name="amount" placeholder="Due Amount" />
+            <input className="px-4 py-2 rounded-lg outline-none" type="text" defaultValue={price} readOnly name="amount" placeholder="Due Amount" />
           </div>
           <textarea className="w-full rounded-lg mt-6 text-stone-500 pl-2 pt-2 h-44" name="Message" id="" defaultValue="Message"></textarea>
           <input className="btn btn-primary text-white w-full" type="submit" value="Order Confirm" />
