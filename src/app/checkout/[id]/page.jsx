@@ -4,6 +4,7 @@ import { getServicesDetails } from "@/services/getServicesAll";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import { stringify } from "postcss";
+import { toast } from "react-toastify";
 
 const Checkout =  ({ params }) => {
     const {data} = useSession()
@@ -31,7 +32,7 @@ const Checkout =  ({ params }) => {
         phone : event.target.phone.value,
         ...service
     }
-    console.log("newBooking", newBooking);
+
     const res = await fetch('http://localhost:3000/checkout/new-booking', {
       method: "POST",
       headers:{
@@ -39,7 +40,9 @@ const Checkout =  ({ params }) => {
       },
       body: JSON.stringify(newBooking)
     })
-    console.log(res);
+    
+    const response = await res.json()
+     toast.success(response.message)
     
   };
 

@@ -11,7 +11,7 @@ const PopularProducts = () => {
                 <h1 className='font-bold text-center text-4xl mb-3'>Browse Our Products</h1>
                 <p className='text-gray-500 text-center px-2'>The majority have suffered alteration in some form, by injected humour, or randomised <br /> words which don't look even slightly believable. </p>
             </div>
-            <div className='grid grid-cols-3 gap-6'>
+            <div className='grid lg:grid-cols-3 gap-6 mt-8'>
                 {
                         products?.map((product)=> <ProductsCard product={product} key={product.id}/>)
                 }
