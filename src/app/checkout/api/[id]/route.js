@@ -7,7 +7,7 @@ export const POST = async(request)=>{
     try {
         const bookingCollection = await db.collection('bookings')
         const newBooking = await bookingCollection.insertOne(booking)
-        return Response.json({message: "booking successful", response: newBooking})
+        return Response.json({message: "Booked successful", response: newBooking})
     } catch (error) {
         return Response.json({message: "Something went wrong"}, {status: 400})
     }

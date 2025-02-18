@@ -7,6 +7,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { SlHandbag } from "react-icons/sl";
 const Navbar = () => {
   const pathName = usePathname();
+  console.log(pathName);
       const session = useSession();
   return (
     <div className="bg-base-100 ">
@@ -33,7 +34,7 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex  ">
         <ul className="menu menu-horizontal px-1 flex gap-4 text-xl font-bold ">
           {links?.map((link) => (
-            <Link className={` hover:text-primary duration-300 ${pathName == link.path ? "text-primary" : ""}`} key={link.path} href={link.path}>
+            <Link className={` hover:text-primary duration-300 ${pathName == link.path ? "text-red-500" : ""}`} key={link.path} href={link.path}>
               {link.title}
             </Link>
           ))}

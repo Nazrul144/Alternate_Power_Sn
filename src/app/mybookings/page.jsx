@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { MdDelete } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
+import swal from 'sweetalert';
 
 const Page = () => {
 
@@ -28,7 +29,19 @@ const Page = () => {
       })
       const res = await deleted.json()
       if(res.response.deletedCount > 0){
-        loadData()
+        swal({
+          title: "Are you sure?",
+          text: "Are you sure that you want to delete your booking?",
+          icon: "warning",
+          dangerMode: true,
+        })
+        .then(willDelete => {
+          if (willDelete) {
+            swal("Deleted!", "Your booking has been deleted!", "success");
+            loadData();
+          }
+        });
+
       }
     }
 
@@ -53,6 +66,7 @@ const Page = () => {
     />
     <h1>Email: {session.data?.user?.email}</h1>
     <h1>User: {session.data?.user?.name}</h1>
+    <h1 className="text-purple-400">Total Booked:{bookings.length}</h1>
 </div>
 
   <table className="table">
