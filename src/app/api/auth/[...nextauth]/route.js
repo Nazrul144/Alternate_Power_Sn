@@ -58,7 +58,7 @@ export const handler = NextAuth({
               return user
             }
           } catch (error) {
-            
+            console.error("Error during sign-in process:", error);
           }
       }else{
         return user;

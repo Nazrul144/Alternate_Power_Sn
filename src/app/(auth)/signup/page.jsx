@@ -7,9 +7,10 @@ import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-
+import Swal from 'sweetalert2'
 
 const Page = () => {
+  
   const handleRegister = async(event)=>{
     event.preventDefault()
     const newUser = {
@@ -30,8 +31,13 @@ const Page = () => {
       if(response.status === 201){
         event.target.reset()
       }
+      console.log(response);
       if(response.ok){
-        alert(result.message)
+        Swal.fire({
+          title: result.message,
+          text: "Click ok button now",
+          icon: "success"
+        });
       }else{
         alert(result.message)
       }
@@ -55,7 +61,7 @@ const Page = () => {
             <br />
             <br />
             <label htmlFor="email">Email</label> <br />
-            <input type="text" name="email" placeholder="Enter your email" required className="input input-bordered w-full  mt-2" />
+            <input type="email" name="email" placeholder="Enter your email" required className="input input-bordered w-full  mt-2" />
             <br />
             <br />
             <label htmlFor="email">Password</label> <br />
