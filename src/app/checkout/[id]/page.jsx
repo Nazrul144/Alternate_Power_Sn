@@ -27,7 +27,7 @@ const Checkout =  ({ params }) => {
     const newBooking = {
         name : data?.user?.name,
         email : data?.user?.email,
-        data : event.target.date.value,
+        date : event.target.date.value,
         address : event.target.address.value,
         phone : event.target.phone.value,
         ...service
