@@ -88,10 +88,10 @@ const Page = () => {
         <th>{index + 1}</th>
         <td>{booking.service.title}</td>
         <td>{booking.service.price}</td>
-        <td>{booking.data}</td>
+        <td>{booking.date}</td>
         <td>
           <div className="flex space-x-4">
-          <button className=""><FaEdit className="text-2xl  text-[#007bff]" /></button>
+          <Link href={`/mybookings/update/${booking._id}`}><button className=""><FaEdit className="text-2xl  text-[#007bff]" /></button></Link>
           <button onClick={()=> handleDelete(booking._id)} className=""><MdDelete className="text-2xl  text-red-600" /></button>
           </div>
         </td>
