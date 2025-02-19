@@ -7,11 +7,12 @@ import { useRouter, useSearchParams } from "next/navigation";
 import SocialSignin from "@/components/shared/SocialSignin";
 
 
+
 const Page = () => {
   const router = useRouter()
   const searchParams= useSearchParams();
   const path = searchParams.get('redirect')
-  
+
     const handleLogin = async(event)=>{
       event.preventDefault()
       const email = event.target.email.value
@@ -23,8 +24,10 @@ const Page = () => {
         callbackUrl: path? path : '/'
       })
 
+      
     
   if (res.status === 200) {
+    
     // Redirect to home page if login is successful
     router.push('/');
   } else {

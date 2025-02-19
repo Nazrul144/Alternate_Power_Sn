@@ -1,15 +1,23 @@
-import { signIn } from 'next-auth/react';
+'use client'
+import { signIn, useSession } from 'next-auth/react';
+import { useSearchParams } from 'next/navigation';
+
 import React from 'react';
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 const SocialSignin = () => {
+ 
+  const searchParams = useSearchParams()
+  const path = searchParams.get('redirect')
+  const session = useSession()
     const handleSocialSignIn = async(provider)=>{
-        const resp = await signIn(provider)
-        if(resp?.data.status === "authenticated"){
-            alert('Logged In')
-        }
+        const resp = await signIn(provider, {
+          redirect: true,
+          callbackUrl: path ? path : '/'
+        })
+        
     }
     return (
         <div className="flex gap-4 justify-center mt-4">
