@@ -10,22 +10,33 @@ import { FaFacebook } from "react-icons/fa6";
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { FaInstagramSquare, FaLinkedin, FaTwitter } from "react-icons/fa";
+import Image from "next/image";
 
 const OurTeam = () => {
 
     const [teams, setTeams] = useState([])
+    const [loading, setLoading] = useState(true)
 
     useEffect(()=>{
         const loadData = async()=>{
             const res = await fetch('http://localhost:3000/team/api')
             const data = await res.json()
             setTeams(data)
+            setLoading(false)
+           
         }
         loadData()
     },[])
+
+
     
   return (
     <div className="container mx-auto mt-12 mb-12">
+        <div className="flex justify-center items-center">
+            {
+                loading && <span className="loading loading-bars loading-lg"></span>
+            }
+        </div>
       <div>
         <h1 className="text-[#FF3811] font-bold text-center">Team</h1>
         <h1 className=" font-bold text-center text-4xl mb-2">Meet Our Team</h1>
@@ -65,19 +76,21 @@ const OurTeam = () => {
           },
         }}
       >
-        {persons?.map((person) => (
+        {teams.data?.map((team) => (
           <SwiperSlide className="grid grid-cols-3 gap mb-12">
             <div className="card bg-base-100 w-96 shadow-xl">
               <figure className="px-4 pt-4">
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Shoes"
+                <Image
+                  src={team.img}
+                  alt="team"
                   className="rounded-xl"
+                  width={400}
+                  height={400}
                 />
               </figure>
               <div className="card-body items-center text-center">
-                <h2 className="card-title">{person.service}</h2>
-                <p>{person.expert}</p>
+                <h2 className="card-title">{team.service}</h2>
+                <p>{team.expert}</p>
                 <div className="card-actions">
                   <FaFacebook className="text-xl text-sky-600" />
                   <FaTwitter className="text-xl" />
@@ -95,15 +108,3 @@ const OurTeam = () => {
 
 export default OurTeam;
 
-const persons= [
-  { id: 1, service: "Car Engine Plug Replacement", expert: "Engine Expert" },
-  { id: 2, service: "Engine Plug Cleaning", expert: "Engine Expert" },
-  { id: 3, service: "Engine Plug Inspection", expert: "Engine Expert" },
-  { id: 4, service: "Premium Engine Plug Upgrade", expert: "Engine Expert" },
-  { id: 5, service: "Engine Plug Wiring Repair", expert: "Engine Expert" },
-  { id: 6, service: "Engine Expert Diagnosis", expert: "Engine Expert" },
-  { id: 7, service: "Engine Overheating Fix", expert: "Engine Expert" },
-  { id: 8, service: "Engine Noise Reduction", expert: "Engine Expert" },
-  { id: 9, service: "Engine Tuning", expert: "Engine Expert" },
-  { id: 10, service: "Full Engine Maintenance", expert: "Engine Expert" },
-]
