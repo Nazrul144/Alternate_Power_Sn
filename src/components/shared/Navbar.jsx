@@ -7,7 +7,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { SlHandbag } from "react-icons/sl";
 const Navbar = () => {
   const pathName = usePathname();
-  console.log(pathName);
+ 
       const session = useSession();
   return (
     <div className="bg-base-100 ">

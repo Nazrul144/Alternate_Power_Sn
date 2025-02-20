@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -12,6 +12,18 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { FaInstagramSquare, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const OurTeam = () => {
+
+    const [teams, setTeams] = useState([])
+
+    useEffect(()=>{
+        const loadData = async()=>{
+            const res = await fetch('http://localhost:3000/team/api')
+            const data = await res.json()
+            setTeams(data)
+        }
+        loadData()
+    },[])
+    
   return (
     <div className="container mx-auto mt-12 mb-12">
       <div>

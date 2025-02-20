@@ -14,9 +14,6 @@ const Page = ({params}) => {
   const loadBooking = async()=>{
     const res = await fetch(`http://localhost:3000/mybookings/api/update-booking/${params.id}`)
     const data = await res.json()
-    console.log(data.response);
-    console.log(data.response.service.price);
-    console.log("Address is",data.response.address);
     setBooking(data.response)
   }
 

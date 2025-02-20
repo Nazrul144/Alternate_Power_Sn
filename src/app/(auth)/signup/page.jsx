@@ -31,7 +31,7 @@ const Page = () => {
       if(response.status === 201){
         event.target.reset()
       }
-      console.log(response);
+  
       if(response.ok){
         Swal.fire({
           title: result.message,
