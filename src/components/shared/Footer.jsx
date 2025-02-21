@@ -37,17 +37,21 @@ const Footer = () => {
         </aside>
         <nav>
           <h6 className="footer-title text-xl font-bold">About</h6>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
+          <Link href={"/"} className="link link-hover">
+            Home
+          </Link>
+          <Link href={"/services"} className="link link-hover">
+            Services
+          </Link>
+          <Link href={"/contact"} className="link link-hover">
+            Contact
+          </Link>
         </nav>
         <nav>
           <h6 className="footer-title text-xl font-bold">Company</h6>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <Link href={"/"} className="link link-hover">Why Car Doctor</Link>
+          <Link href={"/team"} className="link link-hover">Meet Our Team</Link>
+          <Link href={""} className="link link-hover">About</Link>
         </nav>
         <nav>
           <h6 className="footer-title text-xl font-bold">Legal</h6>
