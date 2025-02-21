@@ -3,7 +3,7 @@ import React from "react";
 
 const WhyChooseUs = () => {
   return (
-    <div className="container mx-auto mb-12 mt-12">
+    <div className="container mx-auto mb-28 mt-12">
       <div>
         <h1 className="text-[#FF3811] font-bold text-center mb-4 text-xl">Core Features</h1>
         <h1 className="text-center font-extrabold text-4xl mb-4">Why Choose Us</h1>
