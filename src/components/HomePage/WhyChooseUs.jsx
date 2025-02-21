@@ -38,10 +38,9 @@ const WhyChooseUs = () => {
           <p className="text-center mt-2">100% Guranty</p>
         </div>
        
-       
         <div className="border-[1px] border-gray-300 rounded-lg flex flex-col items-center p-4">
-          <Image width={100} height={100} alt="logo" src="/assets/icons/quote.svg" />
-          <p className="text-center mt-2">Love and Care</p>
+          <Image width={100} height={100} alt="logo" src="/assets/icons/deliveryt.svg" />
+          <p className="text-center mt-2">Timely Delivery</p>
         </div>
         
       </div>
