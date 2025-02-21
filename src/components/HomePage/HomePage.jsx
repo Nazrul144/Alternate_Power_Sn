@@ -5,6 +5,7 @@ import Services from './Services';
 import Address from './Address';
 import PopularProducts from './PopularProducts';
 import OurTeam from '@/app/team/page';
+import WhyChooseUs from './WhyChooseUs';
 
 const HomePage = () => {
     return (
@@ -15,6 +16,7 @@ const HomePage = () => {
             <Address/>
             <PopularProducts/>   
             <OurTeam/>
+            <WhyChooseUs/>
         </div>
     );
 }
