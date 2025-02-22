@@ -5,9 +5,9 @@ import { IoLocationOutline } from "react-icons/io5";
 
 const Location = () => {
   return (
-    <div className="container mx-auto h-screen">
+    <div className="container mx-auto mb-12">
       <div>
-        <h1 className="font-semibold text-center text-xl text-[#D1A054]">~~Visit Us~~</h1>
+        <h1 className="font-semibold text-center text-xl text-[#D1A054]">~~~~ Visit Us ~~~~</h1>
         <h1 className="border-t-2 border-b-2 border-cyan-700 text-center font-extrabold w-40 text-xl mx-auto mt-2 ">
           OUR LOCATION </h1>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
