@@ -53,7 +53,7 @@ const Navbar = () => {
             <SlHandbag className="text-xl" />
             <IoSearchOutline className="text-xl" />
             <div className="avatar">
-              <div className="w-10 rounded-full">
+              <div className="w-10 rounded-full ">
                 <Image
                   className="relative hover:"
                   src={image || "/assets/icons/avater.png"}
@@ -62,9 +62,7 @@ const Navbar = () => {
                   height={30}
                 />
                 {name && (
-                  <div className="tooltip tooltip-bottom" data-tip={name}>
-                        <div className="absolute bottom-0 left-0 right-0 w-full h-full"></div>
-                  </div>
+                  <div className="absolute bottom-0 top-4 w-full  text-black text-sm font-bold rounded-md p-1 opacity-0 hover:opacity-100 transition-opacity duration-300 ">{name}</div> 
                 )}
               </div>
             </div>

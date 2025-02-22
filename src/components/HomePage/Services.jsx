@@ -9,7 +9,7 @@ const Services = async() => {
 
     return (
         <div >
-            <div className='container mx-auto text-center'>
+            <div className='container mx-auto text-center mt-12'>
                 <h1 className='text-primary font-bold'>Service</h1>
                 <h1 className='text-3xl text-black font-bold '> Our Service Area</h1>
                 <p className='text-gray-700 w-[800px] mx-auto  mt-8'>The majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>

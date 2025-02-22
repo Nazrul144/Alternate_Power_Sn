@@ -3,7 +3,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mt-4">
       <div className="w-full h-96 relative mb-12 ">
         <Image
           className="rounded-lg"
