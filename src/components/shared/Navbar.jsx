@@ -5,13 +5,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoSearchOutline } from "react-icons/io5";
 import { SlHandbag } from "react-icons/sl";
+// import avetar from '/assets/icons/avater.png'
+
 const Navbar = () => {
   const pathName = usePathname();
 
   const session = useSession();
-  const {email, image} = session?.data?.user || {}
-  
-  console.log(email, image);
+  const { email, image, name } = session?.data?.user || {};
 
   return (
     <div className="bg-base-100 ">
@@ -54,7 +54,18 @@ const Navbar = () => {
             <IoSearchOutline className="text-xl" />
             <div className="avatar">
               <div className="w-10 rounded-full">
-                <Image src={image} alt="profile_image" width={30} height={30} />
+                <Image
+                  className="relative hover:"
+                  src={image || "/assets/icons/avater.png"}
+                  alt="profile_image"
+                  width={30}
+                  height={30}
+                />
+                {name && (
+                  <div className="tooltip tooltip-bottom" data-tip={name}>
+                        <div className="absolute bottom-0 left-0 right-0 w-full h-full"></div>
+                  </div>
+                )}
               </div>
             </div>
             <button className="btn text-primary btn-outline">Appointment</button>
