@@ -6,11 +6,10 @@ import Swal from 'sweetalert2'
 
 const ContactForm = () => {
     const {data} = useSession();
+   const form = useRef();
 
-   
-
-    const form = useRef();
-
+   const audio = new Audio('/assets/success.m4a')
+  console.log(audio);
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs.init(process.env.NEXT_PUBLIC_PUBLIC_ID);
@@ -21,11 +20,13 @@ const ContactForm = () => {
       })
       .then(
         () => {
+          audio.play()
           Swal.fire({
             title: "Your message has been sent successfully!",
             text: "You clicked the button!",
             icon: "success"
           });
+          
           form.current.reset()
         },
         (error) => {
