@@ -46,6 +46,7 @@ export default function RootLayout({ children }) {
         </body>
       </AuthProvider>
       <ToastContainer position="top-center" />
+      
     </html>
   );
 }

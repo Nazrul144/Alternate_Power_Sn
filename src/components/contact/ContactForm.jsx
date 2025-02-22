@@ -26,7 +26,7 @@ const ContactForm = () => {
             <input className="px-4 py-2 rounded-lg outline-none" type="number" name="phone" placeholder="Your Phone" />
             <input className="px-4 py-2 rounded-lg outline-none" type="text" name="address" placeholder="Present Address" />
           </div>
-          <textarea className="w-full rounded-lg mt-6 text-stone-500 pl-2 pt-2 h-44" name="Message" id="" defaultValue="Message"></textarea>
+          <textarea className="w-full rounded-lg mt-6 text-stone-500 pl-2 pt-2 h-44" name="Message" id="" defaultValue="Message" placeholder="Message"></textarea>
           <input className="btn btn-primary text-white w-full" type="submit" value="Send Message" />
         </form>
       </div>
