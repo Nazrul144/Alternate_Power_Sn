@@ -3,18 +3,34 @@ import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { IoSearchOutline } from "react-icons/io5";
 import { SlHandbag } from "react-icons/sl";
-// import avetar from '/assets/icons/avater.png'
 
 const Navbar = () => {
   const pathName = usePathname();
-
   const session = useSession();
   const { email, image, name } = session?.data?.user || {};
 
+  //Changing Menu Color by using useEffect:
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(()=>{
+
+    const handleScroll = ()=>{
+      setScrollY(window.scrollY)
+    }
+    window.addEventListener('scroll', handleScroll) //Update scroll position when user scroll
+
+    return ()=>{
+      window.removeEventListener('scroll',handleScroll)
+    }
+  
+
+  },[])
+
   return (
-    <div className="bg-base-100 ">
+    <div className={`${scrollY > 100 ? 'bg-[#D1A054]' : 'bg-black/30'} transition-colors duration-500  shadow-xl fixed z-10 w-full top-0`}>
       <div className="navbar container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -39,7 +55,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 flex gap-4 text-xl font-bold ">
             {links?.map((link) => (
               <Link
-                className={` hover:text-primary duration-300 ${pathName == link.path ? "text-red-500" : ""}`}
+                className={` hover:text-primary duration-300 ${pathName == link.path ? "text-red-500" : scrollY > 100 ? "text-black" : "text-white"}`}
                 key={link.path}
                 href={link.path}
               >
@@ -62,7 +78,9 @@ const Navbar = () => {
                   height={30}
                 />
                 {name && (
-                  <div className="absolute bottom-0 top-4 w-full  text-black text-sm font-bold rounded-md p-1 opacity-0 hover:opacity-100 transition-opacity duration-300 ">{name}</div> 
+                  <div className="absolute bottom-0 top-4 w-full  text-black text-sm font-bold rounded-md p-1 opacity-0 hover:opacity-100 transition-opacity duration-300 ">
+                    {name}
+                  </div>
                 )}
               </div>
             </div>

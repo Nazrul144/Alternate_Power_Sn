@@ -46,12 +46,12 @@ const Page = () => {
   };
 
   return (
-    <div className="container mx-auto mt-8">
+    <div className="container mx-auto mt-20">
       <div
-        className="bg-red-400 rounded-lg h-60 bg-cover bg-no-repeat bg-center"
+        className="bg-red-400 rounded-lg rounded-t-none h-60 bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url('/assets/images/about_us/parts.jpg')` }}
       >
-        <h1 className="pt-24 px-24 font-bold text-white text-2xl lg:text-4xl">My Bookings</h1>
+        <h1 className="pt-24 px-24 font-bold  text-2xl lg:text-4xl">My Bookings</h1>
         <div className="flex justify-center mt-[55px] lg:mt-[85px] p-1  bg-[#FF3811] rounded-t-full font-bold text-xl text-white w-56 mx-auto ">
           <Link href={"/"}>Home/</Link>
           <Link href={"#"}>Service Details</Link>
@@ -62,13 +62,15 @@ const Page = () => {
         <div className="overflow-x-auto">
           <div className="flex flex-col items-center justify-center mb-4 font-semibold ">
             <Image
-              src={session?.data?.user?.image || {}}
+              src={session?.data?.user?.image ||"/assets/icons/avater.png" }
               alt="User Profile"
               className="w-16 h-16 rounded-full border-2 border-gray-300 shadow-lg"
+              width={40}
+              height={40}
             />
             <h1>Email: {session.data?.user?.email}</h1>
             <h1>User: {session.data?.user?.name}</h1>
-            <h1 className="text-purple-400">Total Booked:{bookings.length}</h1>
+            <h1 className="text-purple-400">Total Bookings:{bookings.length}</h1>
           </div>
 
           <table className="table">

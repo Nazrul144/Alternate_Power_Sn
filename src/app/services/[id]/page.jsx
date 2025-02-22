@@ -149,7 +149,7 @@ const Page = async({params}) => {
           <p className="text-justify px-2">
             {description}
           </p>
-          <div className="grid lg:grid-cols-3 gap-6 rounded-lg">
+          <div className="grid lg:grid-cols-3 gap-6 rounded-lg mt-6">
             {demoNumber?.map((card, index) => (
               <div key={card.number} className="bg-base-100 w-40 h-40 shadow-xl flex flex-col items-center justify-center  rounded-lg p-2 mx-auto">
                 <h1 className="bg-red-500 text-white font-bold text-lg rounded-full w-12 h-12 flex items-center justify-center">

@@ -3,10 +3,10 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="container mx-auto mt-4">
+    <div className="container mx-auto mt-20">
       <div className="w-full h-96 relative mb-12 ">
         <Image
-          className="rounded-lg"
+          className="rounded-lg rounded-t-none"
           src="/assets/images/banner/6.jpg"
           alt="banner"
           layout="fill" // Makes the image fill the container

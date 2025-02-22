@@ -1,9 +1,12 @@
 import React from 'react';
+import CarTips from './blog/CarTips';
+import ExpertAdvice from './blog/ExpertAdvice';
 
 const Blog = () => {
     return (
         <div>
-            <h1>This is blog page</h1>
+            <CarTips/>
+            <ExpertAdvice/>
         </div>
     );
 }

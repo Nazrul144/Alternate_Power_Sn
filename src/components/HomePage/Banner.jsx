@@ -2,8 +2,8 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="container mx-auto mt-4">
-      <div className="carousel w-full rounded-xl">
+    <div className="container mx-auto mt-[101px]">
+      <div className="carousel w-full rounded-xl rounded-t-none">
        {
         slides.map((slide, index) => (
           <div key={index} id={`slide${index+1}`}
