@@ -1,17 +1,17 @@
-import React from 'react';
+import React from "react";
 
 const ContactForm = () => {
-    return (
-        <div>
-            {/*Container Box*/}
-        <div className="absolute inset-0 flex justify-center items-center">
-          <div className=" w-96 h-44  flex flex-col justify-center items-center bg-black/30 border-[1px] shadow-xl border-white rounded-lg">
-            <h1 className="text-white text-4xl font-extrabold">CONTACT US</h1>
-            <p className="text-white mt-2 text-xl font-bold">Get in Touch for Car Services</p>
-          </div>
-        </div>
-        </div>
-    );
-}
+  return (
+    <div className="container mx-auto">
+      <h1 className="font-semibold text-center text-xl text-[#D1A054]">~~~~ Send Us a Message ~~~~</h1>
+      <h1 className="border-t-2 border-b-2 border-cyan-700 text-center font-extrabold w-40 text-xl mx-auto mt-2 ">
+      CONTACT FORM
+      </h1>
+
+      {/*Contact Form*/}
+
+    </div>
+  );
+};
 
 export default ContactForm;
