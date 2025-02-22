@@ -51,13 +51,13 @@ const Footer = () => {
           <h6 className="footer-title text-xl font-bold">Company</h6>
           <Link href={"/"} className="link link-hover">Why Car Doctor</Link>
           <Link href={"/team"} className="link link-hover">Meet Our Team</Link>
-          <Link href={""} className="link link-hover">About</Link>
+          <Link href={"/about"} className="link link-hover">About</Link>
         </nav>
         <nav>
-          <h6 className="footer-title text-xl font-bold">Legal</h6>
-          <a className="link link-hover">Terms of use</a>
-          <a className="link link-hover">Privacy policy</a>
-          <a className="link link-hover">Cookie policy</a>
+          <h6 className="footer-title text-xl font-bold">Support</h6>
+          <Link href={'/'} className="link link-hover">Support Center</Link>
+          <Link href={'/'} className="link link-hover">Feedback</Link>
+          <Link href={'/'} className="link link-hover">Accessibility</Link>
         </nav>
       </footer>
     </div>
