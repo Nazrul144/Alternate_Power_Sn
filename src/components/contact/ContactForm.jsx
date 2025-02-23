@@ -9,7 +9,7 @@ const ContactForm = () => {
    const form = useRef();
 
    const audio = new Audio('/assets/success.m4a')
-  console.log(audio);
+   
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs.init(process.env.NEXT_PUBLIC_PUBLIC_ID);
@@ -53,7 +53,7 @@ const ContactForm = () => {
           
             <input className="px-4 py-2 rounded-lg outline-none" name="from_email" type="text" defaultValue={data?.user?.email} placeholder="Your Email" />
           </div>
-          <textarea className="w-full rounded-lg mt-6 text-stone-500 pl-2 pt-2 h-44" name="message" id=""  placeholder="Message"></textarea>
+          <textarea className="w-full rounded-lg mt-6 text-stone-500 pl-2 pt-2 h-44" required name="message" id=""  placeholder="Message"></textarea>
           <input className="btn btn-primary text-white w-full" type="submit" value="Send Message" />
         </form>
       </div>
