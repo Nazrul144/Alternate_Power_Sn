@@ -1,10 +1,20 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { Suspense } from "react";
 import {signIn} from 'next-auth/react'
 import { useRouter, useSearchParams } from "next/navigation";
 import SocialSignin from "@/components/shared/SocialSignin";
+
+
+const LoginPage = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Page />
+    </Suspense>
+  );
+};
+
 
 
 
@@ -74,4 +84,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default LoginPage;
