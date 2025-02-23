@@ -1,13 +1,15 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import 'animate.css';
 
 const CarTips = () => {
+
     return (
         <div className="bg-gray-100 py-10 mt-[70px]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-semibold text-gray-800">Car Maintenance Tips</h2>
+          <div className="text-center mb-12 animate__animated animate__tada animate__delay-1s	">
+            <h2 className="text-3xl font-semibold text-gray-800 ">Car Maintenance Tips</h2>
             <p className="text-lg text-gray-600 mt-4">Essential tips to ensure your car runs smoothly and efficiently.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
