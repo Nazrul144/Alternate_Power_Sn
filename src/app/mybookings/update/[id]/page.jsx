@@ -12,11 +12,8 @@ const Page = ({ params }) => {
   const loadBooking = async () => {
     const res = await fetch(`http://localhost:3000/mybookings/api/update-booking/${params.id}`);
     const data = await res.json();
-    setBooking(data.NextResponse);
+    setBooking(data.response);
   };
-
-  console.log(booking?.service?.price); // Access nested properties safely
-  console.log("Address is", booking?.address); // Access nested properties safely
 
   const handleUpdateBooking = async (event) => {
     event.preventDefault();
@@ -47,7 +44,6 @@ const Page = ({ params }) => {
     loadBooking();
   }, []);
 
-  console.log(booking?.service?.img);
 
   return (
     <div className="container mx-auto">

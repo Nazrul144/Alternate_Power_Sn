@@ -8,6 +8,7 @@ import { FaEdit } from "react-icons/fa";
 import swal from "sweetalert";
 
 const Page = () => {
+
   const session = useSession();
   const [bookings, setBookings] = useState([]);
 
@@ -25,23 +26,20 @@ const Page = () => {
     /*Delete*/
   }
   const handleDelete = async (id) => {
-    const deleted = await fetch(`http://localhost:3000/mybookings/api/delete-booking/${id}`, {
-      method: "DELETE",
+    swal({
+      title: "Are you sure?",
+      text: "Are you sure that you want to delete your booking?",
+      icon: "warning",
+      dangerMode: true,
+    }).then(async (willDelete) => {
+      if (willDelete) {
+        const deleted = await fetch(`http://localhost:3000/mybookings/api/delete-booking/${id}`, {
+          method: "DELETE",
+        });
+        swal("Deleted!", "Your booking has been deleted!", "success");
+        loadData();
+      }
     });
-    const res = await deleted.json();
-    if (res.NextResponse.deletedCount > 0) {
-      swal({
-        title: "Are you sure?",
-        text: "Are you sure that you want to delete your booking?",
-        icon: "warning",
-        dangerMode: true,
-      }).then((willDelete) => {
-        if (willDelete) {
-          swal("Deleted!", "Your booking has been deleted!", "success");
-          loadData();
-        }
-      });
-    }
   };
 
   return (
@@ -61,7 +59,7 @@ const Page = () => {
         <div className="overflow-x-auto">
           <div className="flex flex-col items-center justify-center mb-4 font-semibold ">
             <Image
-              src={session?.data?.user?.image || "/assets/icons/avater.png"}
+              src={session?.data?.user?.image ||"/assets/icons/avater.png" }
               alt="User Profile"
               className="w-16 h-16 rounded-full border-2 border-gray-300 shadow-lg"
               width={40}
