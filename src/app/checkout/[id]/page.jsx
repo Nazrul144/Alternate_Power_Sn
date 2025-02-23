@@ -40,8 +40,8 @@ const Checkout = ({ params }) => {
       body: JSON.stringify(newBooking),
     });
 
-    const response = await res.json();
-    toast.success(response.message);
+    const NextResponse = await res.json();
+    toast.success(NextResponse.message);
     form.current.reset();
   };
 

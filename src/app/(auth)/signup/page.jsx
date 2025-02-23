@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,45 +7,43 @@ import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 const Page = () => {
-  
-  const handleRegister = async(event)=>{
-    event.preventDefault()
+  const handleRegister = async (event) => {
+    event.preventDefault();
     const newUser = {
-      name : event.target.name.value,
-      email : event.target.email.value,
-      password : event.target.password.value
-    }
-    
+      name: event.target.name.value,
+      email: event.target.email.value,
+      password: event.target.password.value,
+    };
+
     try {
-      const response = await fetch('signup/api', {
+      const NextResponse = await fetch("signup/api", {
         method: "POST",
-        headers:{
-          "Content-Type": "application/json"
+        headers: {
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(newUser)
-      })
-      const result = await response.json()
-      if(response.status === 201){
-        event.target.reset()
+        body: JSON.stringify(newUser),
+      });
+      const result = await NextResponse.json();
+      if (NextResponse.status === 201) {
+        event.target.reset();
       }
-  
-      if(response.ok){
+
+      if (NextResponse.ok) {
         Swal.fire({
           title: result.message,
           text: "Click ok button now",
-          icon: "success"
+          icon: "success",
         });
-      }else{
-        alert(result.message)
+      } else {
+        alert(result.message);
       }
     } catch (error) {
-        console.log(error.message);
+      console.log(error.message);
     }
-
-  }
+  };
 
   return (
     <div className="container mx-auto py-24 lg:px-24 ">
@@ -61,7 +59,13 @@ const Page = () => {
             <br />
             <br />
             <label htmlFor="email">Email</label> <br />
-            <input type="email" name="email" placeholder="Enter your email" required className="input input-bordered w-full  mt-2" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+              className="input input-bordered w-full  mt-2"
+            />
             <br />
             <br />
             <label htmlFor="email">Password</label> <br />
@@ -73,7 +77,9 @@ const Page = () => {
               className="input input-bordered w-full mt-2"
             />{" "}
             <br /> <br />
-            <button type="submit" className="btn btn-primary w-full text-white">Sign Up</button>
+            <button type="submit" className="btn btn-primary w-full text-white">
+              Sign Up
+            </button>
             <h1 className="mt-4 text-center">Or Sign with</h1>
             <div className="flex gap-4 justify-center mt-4">
               <button>
