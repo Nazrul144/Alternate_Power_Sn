@@ -16,7 +16,7 @@ const CarTips = () => {
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Regular Engine Pipe Changes</h3>
                 <p className="text-gray-600 mt-2">Changing your car's oil regularly is crucial for engine longevity. Learn why it's essential...</p>
-                <a href="/blog/oil-change" className="text-blue-500 mt-4 inline-block">Read more</a>
+                <Link href={'/engine_details'} className="text-blue-500 mt-4 inline-block">Read more</Link>
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -24,7 +24,7 @@ const CarTips = () => {
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Tire Maintenance</h3>
                 <p className="text-gray-600 mt-2">Proper tire care is essential for road safety. Here's how to check and maintain your tires...</p>
-                <a href="/blog/tire-maintenance" className="text-blue-500 mt-4 inline-block">Read more</a>
+                <Link href={"/tire_details"} className="text-blue-500 mt-4 inline-block">Read more</Link>
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
