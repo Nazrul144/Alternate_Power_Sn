@@ -77,7 +77,7 @@ const OurTeam = () => {
         }}
       >
         {teams.data?.map((team) => (
-          <SwiperSlide className="grid grid-cols-3 gap mb-12 mt-12">
+          <SwiperSlide key={team._id} className="grid grid-cols-3 gap mb-12 mt-12">
             <div className="card bg-base-100 w-96 shadow-xl">
               <figure className="px-4 pt-4">
                 <Image
