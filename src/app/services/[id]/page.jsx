@@ -130,15 +130,15 @@ const Page = async ({ params }) => {
                 </Link>
               </div>
             </div>
-            <div className="mt-12 bg-black px-4 rounded-lg">
+            <div className="mt-12 bg-black px-4 rounded-lg ">
               <Image src="/proceed.png" alt="Image" width={400} height={600} />
             </div>
           </div>
         </div>
       </div>
       {/*Three Simple steps:*/}
-      <div className="flex  justify-between gap-4 lg:gap-32 mt-12">
-        <div className="lg:w-[70%]">
+      <div className="lg:flex lg:justify-between gap-4 lg:gap-32 mt-12">
+        <div className="lg:w-[70%] mt-[600px] lg:mt-0">
           <h1 className="text-2xl font-bold px-2">3 Simple Steps to Process</h1>
           <p className="text-justify px-2">{description}</p>
           <div className="grid lg:grid-cols-3 gap-6 rounded-lg mt-6">
