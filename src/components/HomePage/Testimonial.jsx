@@ -18,7 +18,7 @@ const Testimonial = async () => {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12 mb-12">
         {data.res.map((item) => (
-          <div className="card bg-base-100 w-full border-[1px] border-gray-200 rounded-lg h-96 p-12 mx-auto ">
+          <div key={item._id} className="card bg-base-100 w-full border-[1px] border-gray-200 rounded-lg h-96 p-12 mx-auto ">
             <div className="flex items-center justify-between ">
               <div className="flex items-center gap-4">
                 <div className="rounded-full overflow-hidden w-[50px] h-[50px] relative">

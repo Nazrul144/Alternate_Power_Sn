@@ -6,7 +6,7 @@ import { FaFacebook, FaGoogle, FaInstagramSquare, FaLinkedin, FaTwitter } from "
 const Footer = () => {
   return (
     <div>
-      <footer className="footer bg-purple-950 text-white p-10">
+      <footer className="footer bg-purple-950 text-white lg:flex lg:gap-44 pt-6 justify-center">
         <aside>
           <Link href="/">
             <Image className="hidden lg:block" src="/Group.svg" alt="Logo" width={100} height={60} />
