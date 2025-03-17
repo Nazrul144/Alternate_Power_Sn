@@ -12,7 +12,7 @@ const Page = () => {
   const [bookings, setBookings] = useState([]);
 
   const loadData = async () => {
-    const res = await fetch(`http://localhost:3000/mybookings/api/${session?.data?.user?.email}`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/mybookings/api/${session?.data?.user?.email}`);
     const data = await res.json();
     setBookings(data);
   };
@@ -32,7 +32,7 @@ const Page = () => {
       dangerMode: true,
     }).then(async (willDelete) => {
       if (willDelete) {
-        const deleted = await fetch(`http://localhost:3000/mybookings/api/delete-booking/${id}`, {
+        const deleted = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/mybookings/api/delete-booking/${id}`, {
           method: "DELETE",
         });
         swal("Deleted!", "Your booking has been deleted!", "success");
