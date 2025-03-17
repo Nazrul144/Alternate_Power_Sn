@@ -8,7 +8,7 @@ const ContactForm = () => {
     const {data} = useSession();
    const form = useRef();
 
-   const audio = new Audio('/assets/success.m4a')
+  //  const audio = new Audio('/assets/success.m4a')
    
   const sendEmail = (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ const ContactForm = () => {
       })
       .then(
         () => {
-          audio.play()
+          // audio.play()
           Swal.fire({
             title: "Your message has been sent successfully!",
             text: "You clicked the button!",
