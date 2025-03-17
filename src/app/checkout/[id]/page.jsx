@@ -32,7 +32,7 @@ const Checkout = ({ params }) => {
       ...service,
     };
 
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/checkout/new-booking`, {
+    const res = await fetch("http://localhost:3000/checkout/new-booking", {
       method: "POST",
       headers: {
         "Content-Type": "Application/json",
