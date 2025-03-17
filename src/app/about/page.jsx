@@ -2,6 +2,10 @@ import About from '@/components/HomePage/About';
 import Link from 'next/link';
 import React from 'react';
 
+export const metadata = {
+    title: "About"
+}
+
 const AboutPage = () => {
     return (
         <div>
