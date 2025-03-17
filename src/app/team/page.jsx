@@ -13,30 +13,24 @@ import { FaInstagramSquare, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
 
 const OurTeam = () => {
+  const [teams, setTeams] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-    const [teams, setTeams] = useState([])
-    const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    const loadData = async () => {
+      const res = await fetch("${process.env.NEXT_PUBLIC_BASE_URL}/team/api");
+      const data = await res.json();
+      setTeams(data);
+      setLoading(false);
+    };
+    loadData();
+  }, []);
 
-    useEffect(()=>{
-        const loadData = async()=>{
-            const res = await fetch('http://localhost:3000/team/api')
-            const data = await res.json()
-            setTeams(data)
-            setLoading(false)
-           
-        }
-        loadData()
-    },[])
-
-
-    
   return (
     <div className="container mx-auto mt-12 mb-12">
-        <div className="flex justify-center items-center">
-            {
-                loading && <span className="loading loading-bars loading-lg"></span>
-            }
-        </div>
+      <div className="flex justify-center items-center">
+        {loading && <span className="loading loading-bars loading-lg"></span>}
+      </div>
       <div>
         <h1 className="text-[#FF3811] font-bold text-center">Team</h1>
         <h1 className=" font-bold text-center text-4xl mb-2">Meet Our Team</h1>
@@ -80,13 +74,7 @@ const OurTeam = () => {
           <SwiperSlide key={team._id} className="grid grid-cols-3 gap mb-12 mt-12">
             <div className="card bg-base-100 w-96 shadow-xl">
               <figure className="px-4 pt-4">
-                <Image
-                  src={team.img}
-                  alt="team"
-                  className="rounded-xl"
-                  width={400}
-                  height={400}
-                />
+                <Image src={team.img} alt="team" className="rounded-xl" width={400} height={400} />
               </figure>
               <div className="card-body items-center text-center">
                 <h2 className="card-title">{team.service}</h2>
@@ -107,4 +95,3 @@ const OurTeam = () => {
 };
 
 export default OurTeam;
-
