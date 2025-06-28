@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -18,13 +18,15 @@ const OurTeam = () => {
 
   useEffect(() => {
     const loadData = async () => {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/team/api`);
+      const res = await fetch('/teamData.json');
       const data = await res.json();
       setTeams(data);
       setLoading(false);
     };
     loadData();
   }, []);
+
+  console.log(teams); // Check the data in console
 
   return (
     <div className="container mx-auto mt-12 mb-12">
@@ -33,14 +35,14 @@ const OurTeam = () => {
       </div>
       <div>
         <h1 className="text-[#FF3811] font-bold text-center">Team</h1>
-        <h1 className=" font-bold text-center text-4xl mb-2">Meet Our Team</h1>
+        <h1 className="font-bold text-center text-4xl mb-2">Meet Our Team</h1>
         <p className="text-center text-gray-400">
           The majority have suffered alteration in some form, by injected humour, <br /> or randomised words which don't look even
           slightly believable.{" "}
         </p>
       </div>
       <Swiper
-        spaceBetween={30}
+        spaceBetween={15} 
         slidesPerView={3}
         centeredSlides={true}
         autoplay={{
@@ -58,27 +60,25 @@ const OurTeam = () => {
             slidesPerView: 1, // Show 1 card for mobile screens
             spaceBetween: 10, // Smaller gap for mobile
           },
-          // When window width is >= 640px (tablet)
           640: {
             slidesPerView: 2, // Show 2 cards for tablet screens
-            spaceBetween: 20, // Medium gap for tablet
+            spaceBetween: 10, // Smaller gap for tablet
           },
-          // When window width is >= 1024px (desktop)
           1024: {
             slidesPerView: 3, // Show 3 cards for desktop screens
-            spaceBetween: 30, // Larger gap for desktop
+            spaceBetween: 15, // Smaller gap for desktop
           },
         }}
       >
-        {teams.data?.map((team) => (
-          <SwiperSlide key={team._id} className="grid grid-cols-3 gap mb-12 mt-12">
-            <div className="card bg-base-100 w-96 shadow-xl">
+        {teams?.map((team) => (
+          <SwiperSlide key={team.id} className="flex justify-center mb-12 mt-12">
+            <div className="card bg-base-100 shadow-xl">
               <figure className="px-4 pt-4">
-                <Image src={team.img} alt="team" className="rounded-xl" width={400} height={400} />
+                <Image src={team.image} alt="team" className="rounded-xl" width={400} height={400} />
               </figure>
               <div className="card-body items-center text-center">
-                <h2 className="card-title">{team.service}</h2>
-                <p>{team.expert}</p>
+                <h2 className="card-title">{team.name}</h2>
+                <p>{team.service}</p>
                 <div className="card-actions">
                   <FaFacebook className="text-xl text-sky-600" />
                   <FaTwitter className="text-xl" />

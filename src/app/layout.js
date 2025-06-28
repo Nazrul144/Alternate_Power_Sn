@@ -24,10 +24,10 @@ const roboto = Roboto({
 
 export const metadata = {
   title: {
-    default: "Car Doctor",
-    template: "%s | Car Doctor", 
+    default: "Alternate Power Solutions",
+    template: "%s | Alternate Power Solutions", 
   },
-  description: "Car Repairing Workshop",
+  description: "Alternate Power Solutions Workshop",
 };
 
 export default function RootLayout({ children }) {

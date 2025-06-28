@@ -7,11 +7,18 @@ const Banner = () => {
       <div className="w-full h-96 relative mb-12 ">
         <Image
           className="rounded-lg rounded-t-none"
-          src="/assets/images/banner/6.jpg"
+          src="/assets/images/banner/5.jpg"
           alt="banner"
-          layout="fill" // Makes the image fill the container
-          objectFit="cover" // Ensures the image covers the container without distortion
-          quality={100} // Optional: Adjust image quality
+          layout="fill" 
+          objectFit="cover" 
+          quality={100} 
+
+          style={{
+            bbackgroundSize: 'cover', 
+                backgroundPosition: 'center', 
+                backgroundRepeat: 'no-repeat' 
+          }}
+          
         />
         {/*Container Box*/}
         <div className="absolute inset-0 flex justify-center items-center">

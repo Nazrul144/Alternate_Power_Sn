@@ -9,7 +9,7 @@ const Footer = () => {
       <footer className="footer bg-purple-950 text-white lg:flex lg:gap-44 pt-6 justify-center">
         <aside>
           <Link href="/">
-            <Image className="hidden lg:block" src="/Group.svg" alt="Logo" width={100} height={60} />
+            <Image className="hidden lg:block" src="/logo.png" alt="Logo" width={100} height={60} />
           </Link>
           <p>
             Edwin Diaz is a software and web <br />
@@ -49,7 +49,7 @@ const Footer = () => {
         </nav>
         <nav>
           <h6 className="footer-title text-xl font-bold">Company</h6>
-          <Link href={"/"} className="link link-hover">Why Car Doctor</Link>
+          <Link href={"/"} className="link link-hover">Why Alternate Power Solutions</Link>
           <Link href={"/team"} className="link link-hover">Meet Our Team</Link>
           <Link href={"/about"} className="link link-hover">About</Link>
         </nav>

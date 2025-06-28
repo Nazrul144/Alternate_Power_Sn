@@ -8,8 +8,7 @@ const WhyChooseUs = () => {
         <h1 className="text-[#FF3811] font-bold text-center mb-4 text-xl">Core Features</h1>
         <h1 className="text-center font-extrabold text-4xl mb-4">Why Choose Us</h1>
         <p className="text-center">
-          The majority have suffered alteration in some form, by injected humour, or randomised <br /> words which don't look even
-          slightly believable.{" "}
+          Many versions of this content have been altered, often with unnecessary humor or random words, which make them look less professional and believable.{" "}
         </p>
       </div>
       <div className="grid grid-cols-2 lg:grid-cols-6 gap-6 mt-12 ">

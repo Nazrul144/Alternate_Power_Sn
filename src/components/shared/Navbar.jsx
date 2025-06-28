@@ -48,7 +48,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link href="/">
-            <Image className="hidden lg:block" src="/Group.svg" alt="Logo" width={100} height={60} />
+            <Image className="hidden lg:block" src="/logo.png" alt="Logo" width={100} height={60} />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex  ">
@@ -113,10 +113,6 @@ const links = [
   {
     title: "Services",
     path: "/services",
-  },
-  {
-    title: "MyBookings",
-    path: "/mybookings",
   },
   {
     title: "Blog",

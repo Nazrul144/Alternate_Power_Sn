@@ -21,7 +21,7 @@ const Address = () => {
           </div>
           <div>
             <h1>Have a question?</h1>
-            <h1 className="font-bold text-white">+8801758752528</h1>
+            <h1 className="font-bold text-white">+880000000000</h1>
           </div>
         </div>
         <div className="flex items-center gap-2">

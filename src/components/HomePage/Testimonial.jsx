@@ -1,10 +1,21 @@
-import { getTestimonialData } from "@/services/testimonial";
+'use client'
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { IoIosStarOutline } from "react-icons/io";
 
-const Testimonial = async () => {
-  const data = await getTestimonialData();
-  console.log(data);
+const Testimonial = () => {
+  const [testimonials, setTestimonials] = useState([])
+
+  useEffect(() => {
+    // Fetch the data inside the useEffect and handle async logic properly
+    const fetchData = async () => {
+      const res = await fetch('/testimonial.json');
+      const data = await res.json();
+      setTestimonials(data);
+    }
+
+    fetchData();  // Call the async function
+  }, [])
 
   return (
     <div className="container mx-auto">
@@ -17,8 +28,8 @@ const Testimonial = async () => {
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12 mb-12">
-        {data.res.map((item) => (
-          <div key={item._id} className="card bg-base-100 w-full border-[1px] border-gray-200 rounded-lg h-96 p-12 mx-auto ">
+        {testimonials.map((item) => (
+          <div key={item.id} className="card bg-base-100 w-full border-[1px] border-gray-200 rounded-lg h-96 p-12 mx-auto ">
             <div className="flex items-center justify-between ">
               <div className="flex items-center gap-4">
                 <div className="rounded-full overflow-hidden w-[50px] h-[50px] relative">
