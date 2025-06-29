@@ -5,7 +5,7 @@ import { useRef} from "react";
 import Swal from 'sweetalert2'
 
 const ContactForm = () => {
-    const {data} = useSession();
+    
    const form = useRef();
 
   //  const audio = new Audio('/assets/success.m4a')
@@ -49,9 +49,9 @@ const ContactForm = () => {
         <form ref={form} onSubmit={sendEmail} >
           <div className="grid grid-cols-2 gap-5 w-full">
             
-            <input className="px-4 py-2 rounded-lg outline-none" name="user_name" type="text" defaultValue={data?.user?.name} placeholder="Your Name" />
+            <input className="px-4 py-2 rounded-lg outline-none" name="user_name" type="text"  placeholder="Your Name" />
           
-            <input className="px-4 py-2 rounded-lg outline-none" name="from_email" type="text" defaultValue={data?.user?.email} placeholder="Your Email" />
+            <input className="px-4 py-2 rounded-lg outline-none" name="from_email" type="text"  placeholder="Your Email" />
           </div>
           <textarea className="w-full rounded-lg mt-6 text-stone-500 pl-2 pt-2 h-44" required name="message" id=""  placeholder="Message"></textarea>
           <input className="btn btn-primary text-white w-full" type="submit" value="Send Message" />

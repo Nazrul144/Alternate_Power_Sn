@@ -9,9 +9,7 @@ import { SlHandbag } from "react-icons/sl";
 
 const Navbar = () => {
   const pathName = usePathname();
-  const session = useSession();
-  const { email, image, name } = session?.data?.user || {};
-
+ 
   //Changing Menu Color by using useEffect:
   const [scrollY, setScrollY] = useState(0);
 
@@ -72,27 +70,21 @@ const Navbar = () => {
               <div className="w-10 rounded-full ">
                 <Image
                   className="relative hover:"
-                  src={image || "/assets/icons/avater.png"}
+                  src={"/assets/icons/avater.png"}
                   alt="profile_image"
                   width={30}
                   height={30}
                 />
-                {name && (
+                {/* {name && (
                   <div className="absolute bottom-0 top-4 w-full  text-black text-sm font-bold rounded-md p-1 opacity-0 hover:opacity-100 transition-opacity duration-300 ">
                     {name}
                   </div>
-                )}
+                )} */}
               </div>
             </div>
             <button className="btn text-primary btn-outline">Appointment</button>
             <Link href={"/login"}>
-              {session.data ? (
-                <button onClick={() => signOut()} className="btn btn-primary text-white font-bold">
-                  Logout
-                </button>
-              ) : (
-                <button className="btn btn-primary text-white font-bold">Login</button>
-              )}
+             <button className="btn btn-primary text-white font-bold">Login</button>
             </Link>
           </div>
         </div>
