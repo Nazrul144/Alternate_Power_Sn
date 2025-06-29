@@ -17,6 +17,7 @@ const About = () => {
                     <h1 className='text-primary mb-2 font-bold mt-8 lg:mt-0 text-2xl text-red-600'>About Us</h1>
                     <h1 className='font-bold text-xl w-96 mb-2'>We are experienced and skilled in delivering quality solutions in this field.</h1>
                     <p className='text-sm text-gray-500'>At APS (Alternate Power Solutions), we provide high-quality property solutions, including solar installations, electrical services, waterproofing, plumbing, and carpentry. With over 30 years of experience, we deliver reliable, cost-effective services that enhance the value of your property. We offer turnkey solutions for commercial, residential, and industrial projects, ensuring long-term results for our clients.</p>
+                    <button className="btn btn-primary  text-white mt-20">Discover More</button>
                 </div>
             </div>
         </div>
