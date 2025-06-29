@@ -1,16 +1,13 @@
 "use client";
-import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { IoSearchOutline } from "react-icons/io5";
-import { SlHandbag } from "react-icons/sl";
 
 const Navbar = () => {
   const pathName = usePathname();
  
-  //Changing Menu Color by using useEffect:
+
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(()=>{
@@ -18,7 +15,7 @@ const Navbar = () => {
     const handleScroll = ()=>{
       setScrollY(window.scrollY)
     }
-    window.addEventListener('scroll', handleScroll) //Update scroll position when user scroll
+    window.addEventListener('scroll', handleScroll) 
 
     return ()=>{
       window.removeEventListener('scroll',handleScroll)
@@ -64,8 +61,6 @@ const Navbar = () => {
         </div>
         <div className="navbar-end ">
           <div className="flex space-x-3 items-center">
-            <SlHandbag className="text-xl" />
-            <IoSearchOutline className="text-xl" />
             <div className="avatar">
               <div className="w-10 rounded-full ">
                 <Image
@@ -75,14 +70,10 @@ const Navbar = () => {
                   width={30}
                   height={30}
                 />
-                {/* {name && (
-                  <div className="absolute bottom-0 top-4 w-full  text-black text-sm font-bold rounded-md p-1 opacity-0 hover:opacity-100 transition-opacity duration-300 ">
-                    {name}
-                  </div>
-                )} */}
+              
               </div>
             </div>
-            <button className="btn text-primary btn-outline">Appointment</button>
+        
             <Link href={"/login"}>
              <button className="btn btn-primary text-white font-bold">Login</button>
             </Link>

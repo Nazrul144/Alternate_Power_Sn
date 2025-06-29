@@ -11,7 +11,7 @@ const Address = () => {
             <SlCalender className="text-2xl text-red-400" />
           </div>
           <div>
-            <h1>We are open monday-friday</h1>
+            <h1>We are open friday-friday</h1>
             <h1 className="font-bold text-xl"> 7:00 am - 9:00 pm</h1>
           </div>
         </div>
@@ -30,7 +30,7 @@ const Address = () => {
           </div>
           <div>
             <h1>Need a repair? our address</h1>
-            <h1 className="font-bold text-white">Liza Street, New York</h1>
+            <h1 className="font-bold text-white">Cape Town Office</h1>
           </div>
         </div>
       </div>

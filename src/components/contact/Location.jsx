@@ -17,8 +17,9 @@ const Location = () => {
               <FcCallback className="text-2xl font-extrabold mt-2 mb-2 " />
               </div>
                 <div className="bg-gray-200 w-[350px] mx-auto mb-3">
-                     <h1 className="font-extrabold text-xl text-center pt-12">Phone</h1>
-                     <h1 className="text-center pb-12">+8801000000000</h1>
+                     <h1 className="font-extrabold text-xl text-center pt-12 ">Phone</h1>
+                     <h1 className="text-center pb-1">Office 021)0018698</h1>
+                     <h1 className="text-center pb-48">Office (+27) 633193323</h1>
                 </div>
               
             </div>
@@ -29,8 +30,13 @@ const Location = () => {
               <IoLocationOutline className="text-2xl font-extrabold mt-2 mb-2 "/>
               </div>
                 <div className="bg-gray-200 w-[350px] mx-auto mb-3">
-                     <h1 className="font-extrabold text-xl text-center pt-12">Address</h1>
-                     <h1 className="text-center pb-12">Bd-Calling, Dhaka</h1>
+                     <h1 className="font-extrabold text-xl text-center pt-12 pb-4">Address</h1>
+                     <h1 className="text-center pb-1">Cape Town Office</h1>
+                     <h1 className="text-center pb-1">Unit 8</h1>
+                     <h1 className="text-center pb-1">Princess Vlei Road</h1>
+                     <h1 className="text-center pb-1">Constantiaberg Business Park</h1>
+                     <h1 className="text-center pb-1">Diep River</h1>
+                     <h1 className="text-center pb-16">Cape Town</h1>
                 </div>      
             </div>
           </div>
@@ -40,9 +46,11 @@ const Location = () => {
               <FaRegClock className="text-2xl font-extrabold mt-2 mb-2 " />
               </div>
                 <div className="bg-gray-200 w-[350px] mx-auto mb-3">
-                     <h1 className="font-extrabold text-xl text-center pt-12">Working Hours</h1>
-                     <h1 className="text-center pb-12">Mon - Fri: 08:00 - 22:00 || Sat - Sun: 10:00 - 23:00</h1>
+                     <h1 className="font-extrabold text-xl text-center pt-12 pb-4">Contact info</h1>
+                     <h1 className="text-center pb-1 ">info@alter-power.co.za</h1>
+                     <h1 className="text-center pb-44">sales@alter-power.co.za</h1>
                 </div>    
+                
             </div>
           </div>
         </div>
