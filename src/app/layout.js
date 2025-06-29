@@ -2,7 +2,6 @@ import { Geist, Geist_Mono, Roboto, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
-import AuthProvider from "@/services/AuthProvider";
 import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
@@ -36,7 +35,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/assets/logo.svg" />
       </head>
-      <AuthProvider>
+      
         <body className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} antialiased`}>
           <div>
             <Navbar />
@@ -45,7 +44,6 @@ export default function RootLayout({ children }) {
           </div>
       <ToastContainer position="top-center" />
         </body>
-      </AuthProvider>
       
     </html>
   );
