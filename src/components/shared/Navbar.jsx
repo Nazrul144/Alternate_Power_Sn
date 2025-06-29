@@ -3,26 +3,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Navbar = () => {
   const pathName = usePathname();
- 
+
 
   const [scrollY, setScrollY] = useState(0);
 
-  useEffect(()=>{
+  useEffect(() => {
 
-    const handleScroll = ()=>{
+    const handleScroll = () => {
       setScrollY(window.scrollY)
     }
-    window.addEventListener('scroll', handleScroll) 
+    window.addEventListener('scroll', handleScroll)
 
-    return ()=>{
-      window.removeEventListener('scroll',handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
     }
-  
 
-  },[])
+
+  }, [])
 
   return (
     <div className={`${scrollY > 100 ? 'bg-[#D1A054]' : 'bg-black/30'} transition-colors duration-500  shadow-xl fixed z-10 w-full top-0`}>
@@ -62,20 +63,10 @@ const Navbar = () => {
         <div className="navbar-end ">
           <div className="flex space-x-3 items-center">
             <div className="avatar">
-              <div className="w-10 rounded-full ">
-                <Image
-                  className="relative hover:"
-                  src={"/assets/icons/avater.png"}
-                  alt="profile_image"
-                  width={30}
-                  height={30}
-                />
-              
-              </div>
             </div>
-        
+            <FaWhatsapp className="text-3xl text-green-700 font-bold" />
             <Link href={"/login"}>
-             <button className="btn btn-primary text-white font-bold">Login</button>
+              <h1 className="font-bold">Call Now: 068 319 3323</h1>
             </Link>
           </div>
         </div>
