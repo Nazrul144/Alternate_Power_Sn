@@ -2,37 +2,37 @@
   {
     "id": "1",
     "name": "Electrical Installation",
-    "description": "Professional electrical setup for residential and commercial properties.",
-    "image": "https://i.postimg.cc/QN2XHb6z/Adobe-Express-file.jpg"
+    "description": "Professional electrical setup for residential and commercial properties. We ensure safe and efficient wiring, lighting, and power systems to meet your needs.",
+    "image": "https://i.postimg.cc/J7d47VLJ/Adobe-Express-file-2.jpg"
   },
   {
     "id": "2",
     "name": "Solar & Inverter Solutions",
-    "description": "Efficient solar panel installations and inverter solutions for energy savings.",
-    "image": "https://i.postimg.cc/k528vCSs/Adobe-Express-file-1.jpg"
+    "description": "We provide efficient solar panel installations and inverter solutions for energy savings. Our systems help reduce electricity bills while supporting a sustainable environment.",
+    "image": "https://i.postimg.cc/85c3CYRX/Adobe-Express-file-3.jpg"
   },
   {
     "id": "3",
     "name": "Battery Backup Systems",
-    "description": "Reliable battery backup systems to ensure continuous power supply during outages.",
-    "image": "path_to_image/battery_backup_system.jpg"
+    "description": "Reliable battery backup systems to ensure continuous power supply during outages. Our solutions guarantee your home or business stays powered during critical times.",
+    "image": "https://i.postimg.cc/mD2xHw9J/Adobe-Express-file-4.jpg"
   },
   {
     "id": "4",
     "name": "Waterproofing & Roof Repair",
-    "description": "Expert waterproofing and roof repairs to protect your property from leaks and damage.",
-    "image": "path_to_image/waterproofing_roof_repair.jpg"
+    "description": "Expert waterproofing and roof repairs to protect your property from leaks and damage. We offer comprehensive services to safeguard your home or business from weather-related issues.",
+    "image": "https://i.postimg.cc/s2tMwMjV/Adobe-Express-file-5.jpg"
   },
   {
     "id": "5",
-    "name": "White Boxing & Painting",
-    "description": "Complete white boxing and painting services for fresh, clean interior spaces.",
-    "image": "path_to_image/white_boxing_painting.jpg"
+    "name": "Inverter Back-Up Power Installation",
+    "description": "We install back-up power solutions to keep your electricity running during loadshedding. Our systems provide uninterrupted power during blackouts, ensuring your comfort and productivity.",
+    "image": "https://i.postimg.cc/PrqGx2Hw/Adobe-Express-file-7.jpg"
   },
   {
     "id": "6",
     "name": "Plumbing Services",
-    "description": "Comprehensive plumbing solutions for installations, repairs, and maintenance.",
-    "image": "path_to_image/plumbing_service.jpg"
+    "description": "We offer comprehensive plumbing solutions for installations, repairs, and maintenance. From fixing leaks to installing new fixtures, we ensure efficient and reliable plumbing for your property.",
+    "image": "https://i.postimg.cc/k5tGHWg2/Adobe-Express-file-8.jpg"
   }
 ]

@@ -6,16 +6,18 @@ import Address from './Address';
 import OurTeam from '@/app/team/page';
 import WhyChooseUs from './WhyChooseUs';
 import TestimonialPage from '@/app/testimonial/page';
+import FAQ from './FAQ';
 
 const HomePage = () => {
     return (
         <div>
             <Banner/>
             <About/>
-            {/* <Services/> */}
+            <Services/>
             <Address/>
             <OurTeam/>
             <WhyChooseUs/>
+            <FAQ/>
             <TestimonialPage/>
         </div>
     );

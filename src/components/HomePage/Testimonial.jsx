@@ -20,11 +20,10 @@ const Testimonial = () => {
   return (
     <div className="container mx-auto">
       <div className="">
-        <h1 className="text-center font-bold text-[#FF3811] mb-4">Testimonial</h1>
+        <h1 className="text-center font-bold text-[#FF3811] mb-4 text-2xl mt-12">Testimonial</h1>
         <h1 className="text-center font-bold text-4xl mb-4">What Customer Says</h1>
         <p className="text-center">
-          The majority have suffered alteration in some form, by injected humour, or randomised <br /> words which don't look even
-          slightly believable.{" "}
+         Our customers love our services! Here's what they have to say about us.{" "}
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12 mb-12">
