@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { SlCalender } from "react-icons/sl";
-
+import { MdAttachEmail } from "react-icons/md";
 const Address = () => {
   return (
     <div className="container mx-auto mt-12 mb-12">
@@ -21,7 +21,11 @@ const Address = () => {
           </div>
           <div>
             <h1>Have a question?</h1>
-            <h1 className="font-bold text-white">+880000000000</h1>
+            <h1 className="font-bold text-white">068 319 3323</h1>
+            <div>
+              <MdAttachEmail />
+              <h1 className="font-bold text-white">info@alter-power.co.za</h1>
+            </div>
           </div>
         </div>
         <div className="flex items-center gap-2">
