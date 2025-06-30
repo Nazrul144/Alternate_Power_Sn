@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="container mx-auto mt-[101px]">
+    <div className="mt-[75px]">
       <div className="carousel w-full rounded-xl rounded-t-none">
         {
           slides.map((slide, index) => (
