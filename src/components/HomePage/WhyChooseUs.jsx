@@ -7,8 +7,9 @@ const WhyChooseUs = () => {
       <div>
         <h1 className="text-[#FF3811] font-bold text-center mb-4 text-xl">Core Features</h1>
         <h1 className="text-center font-extrabold text-4xl mb-4">Why Choose Us</h1>
-        <p className="text-center">
-          We offer reliable, high-quality services tailored to meet your needs, backed by a team of skilled professionals and advanced solutions.
+        <p className="text-center text-lg">
+          We offer reliable, high-quality services tailored to meet your needs, backed <br />
+           by a team of skilled professionals and advanced solutions.
         </p>
       </div>
       <div className="grid grid-cols-2 lg:grid-cols-6 gap-6 mt-12">
