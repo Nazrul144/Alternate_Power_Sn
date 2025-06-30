@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
        
         <div className="border-[1px] border-gray-300 rounded-lg flex flex-col items-center p-4">
           <Image width={100} height={100} alt="logo" src="/assets/icons/deliveryt.svg" />
-          <p className="text-center mt-2">Timely Delivery</p>
+          <p className="text-center mt-4">Timely Delivery</p>
         </div>
         
       </div>
