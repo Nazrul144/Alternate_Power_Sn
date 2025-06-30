@@ -8,24 +8,22 @@ const Address = () => {
       <div className="grid lg:grid-cols-3 space-y-2 bg-black rounded-lg text-white lg:py-20 lg:px-12">
         <div className="flex items-center gap-2">
           <div>
-            <SlCalender className="text-2xl text-red-400" />
+            <SlCalender className="text-4xl text-red-400" />
           </div>
           <div>
-            <h1>We are open friday-friday</h1>
-            <h1 className="font-bold text-xl"> 7:00 am - 9:00 pm</h1>
+            <h1 className="font-bold">We are open</h1>
+            <h1 className="font-bold">Open 24/7, 365!</h1>
           </div>
         </div>
         <div className="flex items-center gap-2">
           <div>
             <Image src="/assets/images/address/Group 34.svg" alt="logo" width={40} height={30} />
+             <MdAttachEmail className="text-4xl mt-4" />
           </div>
           <div>
             <h1>Have a question?</h1>
             <h1 className="font-bold text-white">068 319 3323</h1>
-            <div className="flex items-center">
-              <MdAttachEmail />
               <h1 className="font-bold text-white">info@alter-power.co.za</h1>
-            </div>
           </div>
         </div>
         <div className="flex items-center gap-2">
