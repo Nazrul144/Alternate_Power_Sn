@@ -22,7 +22,7 @@ const Address = () => {
           <div>
             <h1>Have a question?</h1>
             <h1 className="font-bold text-white">068 319 3323</h1>
-            <div>
+            <div className="flex items-center">
               <MdAttachEmail />
               <h1 className="font-bold text-white">info@alter-power.co.za</h1>
             </div>
