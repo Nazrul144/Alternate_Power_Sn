@@ -2,8 +2,8 @@ import React from 'react'
 
 const FAQ = () => {
     return (
-        <div className='container mx-auto'>
-            <h1 className='text-2xl mb-16 text-center font-bold'>Frequently Asked Questions</h1>
+        <div className='container mx-auto mt-20'>
+            <h1 className='text-2xl mb-12 text-center font-bold'>Frequently Asked Questions</h1>
             <div className="collapse collapse-plus bg-base-100 border border-base-300">
                 <input type="radio" name="my-accordion-3" defaultChecked />
                 <div className="collapse-title font-semibold text-xl">What services do you offer?</div>
