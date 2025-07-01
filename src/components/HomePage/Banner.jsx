@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Label } from "../ui/label";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import Link from "next/link";
 
 const Banner = () => {
 
-  const [service, setService] = useState('Comfortable')
+  const [service, setService] = useState()
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -37,14 +38,14 @@ const Banner = () => {
 
               className="carousel-item relative w-full h-[90vh] bg-top bg-no-repeat">
               {/*Button and form on slider*/}
-              <div className="flex justify-between">
+              <div className="flex lg:gap-44 items-center">
                 <div>
                   <div className="h-full w-full flex items-center lg:pl-36">
                     <div className="px-2">
                       <h1 className="text-4xl font-bold text-white">{slide.title}</h1>
                       <p className="text-white mb-2 lg:w-[500px] text-justify mt-3">{slide.description}</p>
                       <button className="btn btn-primary  text-white">Discover More</button>
-                      <button className="btn btn-outline text-white ml-4">Latest Project</button>
+                      <Link href={'/contact'} className="btn btn-outline text-white ml-4">Contact Us</Link>
                     </div>
                   </div>
                 </div>
@@ -152,8 +153,8 @@ const Banner = () => {
 
 const slides = [
   {
-    title: 'Affordable, Comprehensive Property Solutions',
-    description: 'From solar installations to plumbing and electrical support, APS delivers high-quality, cost-effective services to enhance your property.',
+    title: 'Looking for a trusted electrician in Cape Town?',
+    description: 'Our services include 24/7 emergency electrical call-outs, as well as professional installation of inverters and solar panels.',
     next: '#slide2',
     prev: '#slide4'
   },
