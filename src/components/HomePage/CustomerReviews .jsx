@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { FaLongArrowAltRight } from 'react-icons/fa';
+import { FaLongArrowAltRight, FaStar } from 'react-icons/fa';
 import { FaArrowRightLong } from 'react-icons/fa6';
 
 const CustomerReviews = () => {
@@ -28,21 +28,33 @@ const CustomerReviews = () => {
         {/* First Card */}
         <div className="bg-transparent border-[0.1px] border-orange-950 p-2 rounded-lg shadow-xl w-full lg:w-1/2 h-auto lg:h-80 flex flex-col items-center justify-center">
           <h2 className=" text-sm lg:text-xl lg:mb-2 text-center">Excellent electrician. Installed an inverter for me in under 2 days that works perfectly and subsequently did other perfect electrical work for me. Highly recommended</h2>
-          <h4>Ratting</h4>
+          <h4 className='flex gap-1 mb-4'>
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+          </h4>
           <div className=" w-12 h-12 lg:w-24 lg:h-24 rounded-full overflow-hidden">
             <Image className="object-cover w-full h-full" src="/ratting_p1.jpg" alt="ratting" width={100} height={100} />
           </div>
-          <p className="text-gray-700 text-center">Name</p>
+          <p className="text-black mt-2 text-center">Martine Cuper</p>
         </div>
 
         {/* Second Card */}
         <div className="bg-transparent border-[0.1px] border-orange-950 p-2 rounded-lg shadow-xl w-full lg:w-1/2 h-auto lg:h-80 flex flex-col items-center justify-center">
-          <h2 className="text-sm lg:text-xl text-center">Excellent electrician. Installed an inverter for me in under 2 days that works perfectly and subsequently did other perfect electrical work for me. Highly recommended</h2>
-          <h4>Ratting</h4>
+          <h2 className="text-sm lg:text-xl lg:mb-2 text-center ">Excellent electrician. Installed an inverter for me in under 2 days that works perfectly and subsequently did other perfect electrical work for me. Highly recommended</h2>
+          <h4 className='flex gap-1 mb-4'>
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+          </h4>
           <div className=" w-12 h-12 lg:w-24 lg:h-24 rounded-full overflow-hidden">
-            <Image className="object-cover w-full h-full" src="/ratting_p1.jpg" alt="ratting" width={100} height={100} />
+            <Image className="object-cover w-full h-full" src="/ratting_p2.avif" alt="ratting" width={100} height={100} />
           </div>
-          <p className="text-gray-700 text-center">Name</p>
+          <p className="text-black mt-2 text-center">Olivia</p>
         </div>
       </div>
       <div className="absolute bottom-2 lg:bottom-6 left-1/2 transform -translate-x-1/2 w-72">
