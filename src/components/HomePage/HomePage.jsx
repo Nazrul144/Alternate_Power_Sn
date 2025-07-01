@@ -7,6 +7,7 @@ import OurTeam from '@/app/team/page';
 import WhyChooseUs from './WhyChooseUs';
 import TestimonialPage from '@/app/testimonial/page';
 import FAQ from './FAQ';
+import CustomerReviews from './CustomerReviews ';
 
 const HomePage = () => {
     return (
@@ -17,6 +18,7 @@ const HomePage = () => {
             <Address/>
             <OurTeam/>
             <WhyChooseUs/>
+            <CustomerReviews/>
             <FAQ/>
             <TestimonialPage/>
         </div>
