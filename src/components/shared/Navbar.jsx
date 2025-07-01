@@ -67,6 +67,7 @@ const Navbar = () => {
             <FaWhatsapp className="text-3xl text-green-700 font-bold" />
             <Link href={"/login"}>
               <h1 className="font-bold">Call Now: 068 319 3323</h1>
+              <h1 className="font-bold">Open 24/7, 365!</h1>
             </Link>
           </div>
         </div>
