@@ -1,6 +1,7 @@
 import React from "react";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
-import { Label } from "@shadcn/ui";
+import { Label } from "../ui/label";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 const Banner = () => {
   return (
@@ -70,6 +71,7 @@ const Banner = () => {
                             id="email"
                             type="email"
                             placeholder="Your Email"
+                            required
                           />
                         </div>
 
@@ -86,21 +88,27 @@ const Banner = () => {
                         </div>
                       </div>
                       {/*Radio Group*/}
-                      <RadioGroup defaultValue="comfortable">
-                        <div className="flex items-center gap-3">
-                          <RadioGroupItem value="default" id="r1" />
-                          <Label htmlFor="r1">Default</Label>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <RadioGroupItem value="comfortable" id="r2" />
-                          <Label htmlFor="r2">Comfortable</Label>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <RadioGroupItem value="compact" id="r3" />
-                          <Label htmlFor="r3">Compact</Label>
-                        </div>
-                      </RadioGroup>
-                      <input className="btn btn-primary text-white w-full mt-6" type="submit" value="Send Message" />
+                      <div className="mt-4">
+                        <h1 className="mb-2 font-bold">What service would you like?</h1>
+                        <RadioGroup defaultValue="comfortable">
+                          <div className="flex items-center gap-3">
+                            <RadioGroupItem value="default" id="r1" />
+                            <Label htmlFor="r1">24/7 Electrical Call Out</Label>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <RadioGroupItem value="comfortable" id="r2" />
+                            <Label htmlFor="r2">Inverter Installation</Label>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <RadioGroupItem value="compact" id="r3" />
+                            <Label htmlFor="r3">Solar Installation</Label>
+                          </div>
+                        </RadioGroup>
+                      </div>
+                      <div className="relative">
+                        <input className="btn btn-primary text-white w-full mt-6 " type="submit" value="Get 100% Free Quote Now" />
+                        <FaLongArrowAltRight className="absolute top-[41px] right-24 text-white" />
+                      </div>
                     </form>
                   </div>
                 </div>
