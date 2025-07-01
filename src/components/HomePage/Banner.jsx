@@ -4,6 +4,17 @@ import { Label } from "../ui/label";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 const Banner = () => {
+
+  const handleFormSubmit = (e) => {
+    const formData = {
+      first_name: e.target.first_name.value,
+      last_name: e.target.first_name.value,
+      email: e.target.from_email.value,
+      phone: e.target.phone.value,
+    }
+    console.log(formData); 
+  }
+
   return (
     <div className="mt-[75px]">
       <div className="carousel w-full rounded-xl rounded-t-none">
@@ -35,7 +46,7 @@ const Banner = () => {
                 <div >
                   {/* Form*/}
                   <div className="bg-[#F3F3F3] p-12 my-12 rounded-lg lg:px-32 ">
-                    <form >
+                    <form onSubmit={handleFormSubmit}>
                       <div className="w-full flex flex-col space-y-4"> {/* Using flex column to stack inputs */}
 
                         {/* First Name */}
@@ -43,7 +54,7 @@ const Banner = () => {
                           <label htmlFor="user_name" className="block text-sm font-medium text-gray-700">First Name</label>
                           <input
                             className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1"
-                            name="user_name"
+                            name="first_name"
                             id="user_name"
                             type="text"
                             placeholder="Your First Name"
