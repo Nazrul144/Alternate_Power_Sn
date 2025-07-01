@@ -37,7 +37,7 @@ const Banner = () => {
 
               className="carousel-item relative w-full h-[90vh] bg-top bg-no-repeat">
               {/*Button and form on slider*/}
-              <div className="flex">
+              <div className="flex justify-between">
                 <div>
                   <div className="h-full w-full flex items-center lg:pl-36">
                     <div className="px-2">
