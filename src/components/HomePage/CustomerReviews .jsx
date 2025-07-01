@@ -3,14 +3,14 @@ import React from 'react';
 const CustomerReviews = () => {
   return (
     <div 
-      className="relative rounded-sm" // Set relative positioning for the container
+      className="relative rounded-sm" 
       style={{
-        backgroundImage: 'url(/ratting.jpg)', // Replace with your image path
-        backgroundSize: 'cover',   // Ensures the image covers the whole div
-        backgroundPosition: 'center',  // Centers the image
-        backgroundRepeat: 'no-repeat', // Ensures the image doesn't repeat
-        minHeight: '500px', // Adjust the height as needed
-        overflow: 'hidden', // Prevent overflow
+        backgroundImage: 'url(/ratting.jpg)', 
+        backgroundSize: 'cover',   
+        backgroundPosition: 'center',  
+        backgroundRepeat: 'no-repeat', 
+        minHeight: '500px', 
+        overflow: 'hidden', 
       }}
     >
       {/* Heading positioned on top of the background image */}
