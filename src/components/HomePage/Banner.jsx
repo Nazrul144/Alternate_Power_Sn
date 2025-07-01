@@ -1,4 +1,5 @@
 import React from "react";
+import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 
 
 const Banner = () => {
@@ -83,8 +84,22 @@ const Banner = () => {
                             placeholder="Your Phone Number"
                           />
                         </div>
-
                       </div>
+                      {/*Radio Group*/}
+                      <RadioGroup defaultValue="comfortable">
+                        <div className="flex items-center gap-3">
+                          <RadioGroupItem value="default" id="r1" />
+                          <Label htmlFor="r1">Default</Label>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <RadioGroupItem value="comfortable" id="r2" />
+                          <Label htmlFor="r2">Comfortable</Label>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <RadioGroupItem value="compact" id="r3" />
+                          <Label htmlFor="r3">Compact</Label>
+                        </div>
+                      </RadioGroup>
                       <input className="btn btn-primary text-white w-full mt-6" type="submit" value="Send Message" />
                     </form>
                   </div>
@@ -105,6 +120,9 @@ const Banner = () => {
     </div>
   );
 };
+
+
+
 
 const slides = [
   {
