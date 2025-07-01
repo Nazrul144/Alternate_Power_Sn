@@ -1,18 +1,24 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Label } from "../ui/label";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 const Banner = () => {
 
+  const [service, setService] = useState('Comfortable')
+
   const handleFormSubmit = (e) => {
+    e.preventDefault();
     const formData = {
       first_name: e.target.first_name.value,
-      last_name: e.target.first_name.value,
+      last_name: e.target.last_name.value,
       email: e.target.from_email.value,
       phone: e.target.phone.value,
+      service: service
+
     }
-    console.log(formData); 
+    console.log(formData);
   }
 
   return (
@@ -102,17 +108,17 @@ const Banner = () => {
                       {/*Radio Group*/}
                       <div className="mt-4">
                         <h1 className="mb-2 font-bold">What service would you like?</h1>
-                        <RadioGroup defaultValue="comfortable">
+                        <RadioGroup value={service} onValueChange={setService}>
                           <div className="flex items-center gap-3">
-                            <RadioGroupItem value="default" id="r1" />
+                            <RadioGroupItem value="electrical_call" id="r1" name="service" />
                             <Label htmlFor="r1">24/7 Electrical Call Out</Label>
                           </div>
                           <div className="flex items-center gap-3">
-                            <RadioGroupItem value="comfortable" id="r2" />
+                            <RadioGroupItem value="inverter_installtion" id="r2" name="service" />
                             <Label htmlFor="r2">Inverter Installation</Label>
                           </div>
                           <div className="flex items-center gap-3">
-                            <RadioGroupItem value="compact" id="r3" />
+                            <RadioGroupItem value="solar_installation" id="r3" name="service" />
                             <Label htmlFor="r3">Solar Installation</Label>
                           </div>
                         </RadioGroup>
