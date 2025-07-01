@@ -84,6 +84,7 @@ const Banner = () => {
                             id="phone"
                             type="tel"
                             placeholder="Your Phone Number"
+                            required
                           />
                         </div>
                       </div>
