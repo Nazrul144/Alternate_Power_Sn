@@ -16,14 +16,24 @@ import {
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from '../ui/radio-group';
 import { FaLongArrowAltRight } from 'react-icons/fa';
+import Swal from 'sweetalert2';
 
 
 const About = () => {
 
-     const [service, setService] = useState()
+    const [service, setService] = useState(null)
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
+        if (!service) {
+            Swal.fire({
+                title: "Drag me!",
+                icon: "success",
+                draggable: true
+            });
+            return; // Prevent form submission
+        }
+
         const formData = {
             first_name: e.target.first_name.value,
             last_name: e.target.last_name.value,
@@ -32,7 +42,10 @@ const About = () => {
             service: service
         }
         setService(formData)
+
     }
+
+    console.log(service)
 
     return (
         <div className='container mx-auto mt-28 mb-14'>
@@ -46,7 +59,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className='text-justify'>
-                     <h1 className="font-extrabold text-2xl mx-auto mt-2 mb-8 text-[#FF3811]">About Us</h1>
+                    <h1 className="font-extrabold text-2xl mx-auto mt-2 mb-8 text-[#FF3811]">About Us</h1>
                     <p className='text-xl text-gray-500'>We are a trusted electrical services provider based in Cape Town, specializing in a wide range of electrical and solar solutions for residential, commercial, and industrial customers. <br />
                         Founded in 2015, Alternate Power Solutions (APS) started as a family-owned business focusing on off-the-grid power solutions, electrical backup systems, and solar energy solutions. <br />
                         With over 9 years of experience, we are proud of our reputation for delivering practical, affordable, and sustainable energy solutions. Whether it's providing solar panel installations, solar battery backups, or solar-powered solutions, we ensure that our clients enjoy reliable and cost-effective power without the need for additional financial burdens. <br />
