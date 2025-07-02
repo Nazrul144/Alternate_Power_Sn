@@ -5,7 +5,8 @@ const WhyChooseUs = () => {
   return (
     <div className="container mx-auto mb-28 mt-12">
       <div>
-        <h1 className="text-[#FF3811] font-bold text-center mb-4 text-xl">Core Features</h1>
+         <h1 className="border-t-2 border-b-2 border-cyan-700 text-center font-extrabold w-40 text-2xl mx-auto mt-2 mb-4 text-[#FF3811]">
+          Core Features</h1>
         <h1 className="text-center font-extrabold text-4xl mb-4">Why Choose Us</h1>
         <p className="text-center text-lg">
           We offer reliable, high-quality services tailored to meet your needs, backed <br />

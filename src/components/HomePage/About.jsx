@@ -22,7 +22,7 @@ const About = () => {
 
      const [service, setService] = useState()
 
-    const handleFormSubmit = () => {
+    const handleFormSubmit = (e) => {
         e.preventDefault();
         const formData = {
             first_name: e.target.first_name.value,
@@ -64,10 +64,6 @@ const About = () => {
                                         <DialogTitle>
                                             <h1 className='text-center text-2xl font-bold'>Get Free Quote Now:</h1>
                                         </DialogTitle>
-                                        {/* <DialogDescription>
-                                            Make changes to your profile here. Click save when you&apos;re
-                                            done.
-                                        </DialogDescription> */}
                                     </DialogHeader>
                                     <div className="grid gap-4">
                                         <div className="grid gap-3">
@@ -155,12 +151,12 @@ const About = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <DialogFooter>
+                                    {/* <DialogFooter>
                                         <DialogClose asChild>
                                             <Button variant="outline">Cancel</Button>
                                         </DialogClose>
                                         <Button type="submit">Save changes</Button>
-                                    </DialogFooter>
+                                    </DialogFooter> */}
                                 </DialogContent>
                             </form>
                         </Dialog>

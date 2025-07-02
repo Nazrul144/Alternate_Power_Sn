@@ -34,7 +34,8 @@ const OurTeam = () => {
         {loading && <span className="loading loading-bars loading-lg"></span>}
       </div>
       <div>
-        <h1 className="text-[#FF3811] font-bold text-center">Team</h1>
+        <h1 className="border-t-2 border-b-2 border-cyan-700 text-center font-extrabold w-20 text-2xl mx-auto mt-2 mb-4 text-[#FF3811]">
+          Team </h1>
         <h1 className="font-bold text-center text-4xl mb-2">Meet Our Team</h1>
         <p className="text-center text-gray-400">
           The majority have suffered alteration in some form, by injected humour, <br /> or randomised words which don't look even
