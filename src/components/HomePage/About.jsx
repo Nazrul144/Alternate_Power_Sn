@@ -17,6 +17,7 @@ import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from '../ui/radio-group';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import Swal from 'sweetalert2';
+import { toast } from 'react-toastify';
 
 
 const About = () => {
@@ -26,11 +27,7 @@ const About = () => {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         if (!service) {
-            Swal.fire({
-                title: "Drag me!",
-                icon: "success",
-                draggable: true
-            });
+            toast.error("Please Select a service")
             return; // Prevent form submission
         }
 
@@ -42,6 +39,8 @@ const About = () => {
             service: service
         }
         setService(formData)
+        toast.success('Successfully submitted your details!')
+
 
     }
 
