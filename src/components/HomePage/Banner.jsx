@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Label } from "../ui/label";
-import { FaLongArrowAltRight } from "react-icons/fa";
+import { FaLongArrowAltRight, FaStar } from "react-icons/fa";
 import Link from "next/link";
 
 const Banner = () => {
@@ -44,8 +44,17 @@ const Banner = () => {
                     <div className="px-2">
                       <h1 className="text-4xl font-bold text-white">{slide.title}</h1>
                       <p className="text-white mb-2 lg:w-[500px] text-justify mt-3">{slide.description}</p>
-                      <button className="btn btn-primary  text-white">Discover More</button>
-                      <Link href={'/contact'} className="btn btn-outline text-white ml-4">Contact Us</Link>
+                      <div className="mt-6">
+                        <div className="text-4xl text-yellow-500 flex gap-2 mb-6">
+                          <FaStar />
+                          <FaStar />
+                          <FaStar />
+                          <FaStar />
+                          <FaStar />
+                        </div>
+                        <Link href={'/blog'} className="btn btn-primary  text-white">Discover More</Link>
+                        <Link href={'/contact'} className="btn btn-outline text-white ml-4">Contact Us</Link>
+                      </div>
                     </div>
                   </div>
                 </div>
