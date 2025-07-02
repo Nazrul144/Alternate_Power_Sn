@@ -51,7 +51,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 flex gap-4 text-xl font-bold ">
             {links?.map((link) => (
               <Link
-                className={` hover:text-primary duration-300 ${pathName == link.path ? "text-red-500" : scrollY > 100 ? "text-black" : "text-white"}`}
+                className={` hover:text-primary duration-300 ${pathName == link.path ? "text-[#ff3811]" : scrollY > 100 ? "text-black" : "text-white"}`}
                 key={link.path}
                 href={link.path}
               >
