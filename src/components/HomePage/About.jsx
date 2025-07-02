@@ -1,6 +1,6 @@
+'use client'
 import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Button } from "@/components/ui/button"
 import {
@@ -13,11 +13,28 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { RadioGroup, RadioGroupItem } from '../ui/radio-group';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 
 
 const About = () => {
+
+     const [service, setService] = useState()
+
+    const handleFormSubmit = () => {
+        e.preventDefault();
+        const formData = {
+            first_name: e.target.first_name.value,
+            last_name: e.target.last_name.value,
+            email: e.target.from_email.value,
+            phone: e.target.phone.value,
+            service: service
+
+        }
+        console.log(formData);
+    }
+
     return (
         <div className='container mx-auto mt-28 mb-14'>
             <div className='grid grid-cols-1 lg:grid-cols-2 lg:px-20 px-2 '>
@@ -44,20 +61,98 @@ const About = () => {
                                 </DialogTrigger>
                                 <DialogContent className="sm:max-w-[425px]">
                                     <DialogHeader>
-                                        <DialogTitle>Edit profile</DialogTitle>
-                                        <DialogDescription>
+                                        <DialogTitle>
+                                            <h1 className='text-center'>Get Free Quote Now:</h1>
+                                        </DialogTitle>
+                                        {/* <DialogDescription>
                                             Make changes to your profile here. Click save when you&apos;re
                                             done.
-                                        </DialogDescription>
+                                        </DialogDescription> */}
                                     </DialogHeader>
                                     <div className="grid gap-4">
                                         <div className="grid gap-3">
-                                            <Label htmlFor="name-1">Name</Label>
-                                            <Input id="name-1" name="name" defaultValue="Pedro Duarte" />
-                                        </div>
-                                        <div className="grid gap-3">
-                                            <Label htmlFor="username-1">Username</Label>
-                                            <Input id="username-1" name="username" defaultValue="@peduarte" />
+                                            {/*Contact Form*/}
+                                            <div >
+                                                {/* Form*/}
+                                                <div className="bg-transparent border-[1px] border-sky-200 shadow-xl p-12 my-12 rounded-lg lg:px-32 ">
+                                                    <form onSubmit={handleFormSubmit}>
+                                                        <div className="w-full flex flex-col space-y-4"> {/* Using flex column to stack inputs */}
+
+                                                            {/* First Name */}
+                                                            <div className="w-full">
+                                                                <label htmlFor="user_name" className="block text-sm font-medium text-white">First Name</label>
+                                                                <input
+                                                                    className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1 bg-transparent border-[1px] border-sky-200 text-white"
+                                                                    name="first_name"
+                                                                    id="user_name"
+                                                                    type="text"
+                                                                    placeholder="Your First Name"
+                                                                />
+                                                            </div>
+
+                                                            {/* Last Name */}
+                                                            <div className="w-full">
+                                                                <label htmlFor="last_name" className="block text-sm font-medium text-white">Last Name</label>
+                                                                <input
+                                                                    className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1 bg-transparent border-[1px] border-sky-200 text-white"
+                                                                    name="last_name"
+                                                                    id="last_name"
+                                                                    type="text"
+                                                                    placeholder="Your Last Name"
+                                                                />
+                                                            </div>
+
+                                                            {/* Email */}
+                                                            <div className="w-full">
+                                                                <label htmlFor="email" className="block text-sm font-medium text-white">Email *</label>
+                                                                <input
+                                                                    className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1 bg-transparent border-[1px] border-sky-200 text-white"
+                                                                    name="from_email"
+                                                                    id="email"
+                                                                    type="email"
+                                                                    placeholder="Your Email"
+                                                                    required
+                                                                />
+                                                            </div>
+
+                                                            {/* Phone */}
+                                                            <div className="w-full">
+                                                                <label htmlFor="phone" className="block text-sm font-medium text-white">Phone *</label>
+                                                                <input
+                                                                    className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1 bg-transparent border-[1px] border-sky-200 text-white"
+                                                                    name="phone"
+                                                                    id="phone"
+                                                                    type="tel"
+                                                                    placeholder="Your Phone Number"
+                                                                    required
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                        {/*Radio Group*/}
+                                                        <div className="mt-4">
+                                                            <h1 className="mb-2 font-semibold text-white">What service would you like?</h1>
+                                                            <RadioGroup value={service} onValueChange={setService}>
+                                                                <div className="flex items-center gap-3 text-white">
+                                                                    <RadioGroupItem value="electrical_call" id="r1" name="service" />
+                                                                    <Label htmlFor="r1" >24/7 Electrical Call Out</Label>
+                                                                </div>
+                                                                <div className="flex items-center gap-3 text-white">
+                                                                    <RadioGroupItem value="inverter_installtion" id="r2" name="service" />
+                                                                    <Label htmlFor="r2">Inverter Installation</Label>
+                                                                </div>
+                                                                <div className="flex items-center gap-3 text-white">
+                                                                    <RadioGroupItem value="solar_installation" id="r3" name="service" />
+                                                                    <Label htmlFor="r3">Solar Installation</Label>
+                                                                </div>
+                                                            </RadioGroup>
+                                                        </div>
+                                                        <div className="relative">
+                                                            <input className="btn btn-primary text-white w-full mt-6 " type="submit" value="Get 100% Free Quote Now" />
+                                                            <FaLongArrowAltRight className="absolute top-[41px] right-24 text-white" />
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <DialogFooter>
