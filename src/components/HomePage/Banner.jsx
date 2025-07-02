@@ -61,15 +61,15 @@ const Banner = () => {
                 {/*Contact Form*/}
                 <div >
                   {/* Form*/}
-                  <div className="bg-[#F3F3F3] p-12 my-12 rounded-lg lg:px-32 ">
+                  <div className="bg-transparent border-[1px] border-white shadow-xl p-12 my-12 rounded-lg lg:px-32 ">
                     <form onSubmit={handleFormSubmit}>
                       <div className="w-full flex flex-col space-y-4"> {/* Using flex column to stack inputs */}
 
                         {/* First Name */}
                         <div className="w-full">
-                          <label htmlFor="user_name" className="block text-sm font-medium text-gray-700">First Name</label>
+                          <label htmlFor="user_name" className="block text-sm font-medium text-white">First Name</label>
                           <input
-                            className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1"
+                            className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1 bg-transparent border-[1px] border-white"
                             name="first_name"
                             id="user_name"
                             type="text"
@@ -79,9 +79,9 @@ const Banner = () => {
 
                         {/* Last Name */}
                         <div className="w-full">
-                          <label htmlFor="last_name" className="block text-sm font-medium text-gray-700">Last Name</label>
+                          <label htmlFor="last_name" className="block text-sm font-medium text-white">Last Name</label>
                           <input
-                            className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1"
+                            className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1 bg-transparent border-[1px] border-white"
                             name="last_name"
                             id="last_name"
                             type="text"
@@ -91,9 +91,9 @@ const Banner = () => {
 
                         {/* Email */}
                         <div className="w-full">
-                          <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email *</label>
+                          <label htmlFor="email" className="block text-sm font-medium text-white">Email *</label>
                           <input
-                            className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1"
+                            className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1 bg-transparent border-[1px] border-white"
                             name="from_email"
                             id="email"
                             type="email"
@@ -104,9 +104,9 @@ const Banner = () => {
 
                         {/* Phone */}
                         <div className="w-full">
-                          <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone *</label>
+                          <label htmlFor="phone" className="block text-sm font-medium text-white">Phone *</label>
                           <input
-                            className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1"
+                            className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1 bg-transparent border-[1px] border-white"
                             name="phone"
                             id="phone"
                             type="tel"
@@ -117,17 +117,17 @@ const Banner = () => {
                       </div>
                       {/*Radio Group*/}
                       <div className="mt-4">
-                        <h1 className="mb-2 font-bold">What service would you like?</h1>
+                        <h1 className="mb-2 font-semibold text-white">What service would you like?</h1>
                         <RadioGroup value={service} onValueChange={setService}>
-                          <div className="flex items-center gap-3">
+                          <div className="flex items-center gap-3 text-white">
                             <RadioGroupItem value="electrical_call" id="r1" name="service" />
-                            <Label htmlFor="r1">24/7 Electrical Call Out</Label>
+                            <Label htmlFor="r1" >24/7 Electrical Call Out</Label>
                           </div>
-                          <div className="flex items-center gap-3">
+                          <div className="flex items-center gap-3 text-white">
                             <RadioGroupItem value="inverter_installtion" id="r2" name="service" />
                             <Label htmlFor="r2">Inverter Installation</Label>
                           </div>
-                          <div className="flex items-center gap-3">
+                          <div className="flex items-center gap-3 text-white">
                             <RadioGroupItem value="solar_installation" id="r3" name="service" />
                             <Label htmlFor="r3">Solar Installation</Label>
                           </div>
