@@ -59,7 +59,7 @@ const About = () => {
                                 <DialogTrigger asChild>
                                     <Button variant="outline" className="bg-[#ff3811] text-white">Get A Free Quote</Button>
                                 </DialogTrigger>
-                                <DialogContent className="sm:max-w-[425px]">
+                                <DialogContent className="sm:max-w-[425px] max-h-[80vh] overflow-y-auto">
                                     <DialogHeader>
                                         <DialogTitle>
                                             <h1 className='text-center'>Get Free Quote Now:</h1>
