@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const About = () => {
@@ -20,7 +21,7 @@ const About = () => {
                      With over 9 years of experience, we are proud of our reputation for delivering practical, affordable, and sustainable energy solutions. Whether it's providing solar panel installations, solar battery backups, or solar-powered solutions, we ensure that our clients enjoy reliable and cost-effective power without the need for additional financial burdens. <br />
                       Our goal is to help you switch to a more sustainable and eco-friendly energy source, all while keeping the cost manageable. Additionally, we offer expert waterproofing & roof repair services to safeguard your property from leaks and damage, and provide plumbing services for installations, repairs, and maintenance, ensuring that your home or business runs smoothly.
                     </p>
-                    <button className="btn btn-primary  text-white mt-4">Get A Free Quote</button>
+                    <Link href={'/modal'} className="btn btn-primary  text-white mt-4">Get A Free Quote</Link>
                     <h1 className='mt-2 font-bold'>Or call us</h1>
                     <h1 className='font-bold text-sky-600 text-xl'>068 319 3323</h1>
                 </div>
