@@ -61,7 +61,7 @@ const Banner = () => {
                 {/*Contact Form*/}
                 <div >
                   {/* Form*/}
-                  <div className="bg-transparent border-[1px] border-white shadow-xl p-12 my-12 rounded-lg lg:px-32 ">
+                  <div className="bg-transparent border-[1px] border-sky-200 shadow-xl p-12 my-12 rounded-lg lg:px-32 ">
                     <form onSubmit={handleFormSubmit}>
                       <div className="w-full flex flex-col space-y-4"> {/* Using flex column to stack inputs */}
 
@@ -69,7 +69,7 @@ const Banner = () => {
                         <div className="w-full">
                           <label htmlFor="user_name" className="block text-sm font-medium text-white">First Name</label>
                           <input
-                            className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1 bg-transparent border-[1px] border-white"
+                            className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1 bg-transparent border-[1px] border-sky-200 text-white"
                             name="first_name"
                             id="user_name"
                             type="text"
@@ -81,7 +81,7 @@ const Banner = () => {
                         <div className="w-full">
                           <label htmlFor="last_name" className="block text-sm font-medium text-white">Last Name</label>
                           <input
-                            className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1 bg-transparent border-[1px] border-white"
+                            className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1 bg-transparent border-[1px] border-sky-200 text-white"
                             name="last_name"
                             id="last_name"
                             type="text"
@@ -93,7 +93,7 @@ const Banner = () => {
                         <div className="w-full">
                           <label htmlFor="email" className="block text-sm font-medium text-white">Email *</label>
                           <input
-                            className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1 bg-transparent border-[1px] border-white"
+                            className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1 bg-transparent border-[1px] border-sky-200 text-white"
                             name="from_email"
                             id="email"
                             type="email"
@@ -106,7 +106,7 @@ const Banner = () => {
                         <div className="w-full">
                           <label htmlFor="phone" className="block text-sm font-medium text-white">Phone *</label>
                           <input
-                            className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1 bg-transparent border-[1px] border-white"
+                            className="px-4 py-2 rounded-lg outline-none w-[400px] mt-1 bg-transparent border-[1px] border-sky-200 text-white"
                             name="phone"
                             id="phone"
                             type="tel"
