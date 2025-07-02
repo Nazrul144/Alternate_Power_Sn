@@ -30,9 +30,8 @@ const About = () => {
             email: e.target.from_email.value,
             phone: e.target.phone.value,
             service: service
-
         }
-        console.log(formData);
+        setService(formData)
     }
 
     return (
@@ -59,7 +58,7 @@ const About = () => {
                                 <DialogTrigger asChild>
                                     <Button variant="outline" className="bg-[#ff3811] text-white">Get A Free Quote</Button>
                                 </DialogTrigger>
-                                <DialogContent className="sm:max-w-[775px] max-h-[80vh] overflow-y-auto bg-slate-500">
+                                <DialogContent className="sm:max-w-[775px] max-h-[80vh] overflow-y-auto bg-sky-900">
                                     <DialogHeader>
                                         <DialogTitle>
                                             <h1 className='text-center text-2xl font-bold'>Get Free Quote Now:</h1>
