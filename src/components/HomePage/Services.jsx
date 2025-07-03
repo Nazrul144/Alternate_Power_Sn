@@ -36,7 +36,7 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               viewport={{ amount: 0.3 }}
-              key={service.id} className="card bg-base-100 shadow-sm border-[1px] border-orange-600">
+              key={service.id} className="card bg-base-100 shadow-sm border-[1px] border-sky-300 hover:bg-sky-100 ease-in duration-500">
               <figure className="px-10 pt-10">
                 <Image
                   src={service.image}
