@@ -28,7 +28,7 @@ const Services = () => {
         className="border-t-2 border-b-2 border-cyan-700 text-center font-extrabold w-48 text-2xl mx-auto mt-2 mb-8 ">
         OUR SERVICES </motion.h1>
       <div
-        className='grid grid-cols-3 gap-6 '>
+        className='grid lg:grid-cols-3 gap-6 '>
         {
           services?.map((service) => (
             <motion.div

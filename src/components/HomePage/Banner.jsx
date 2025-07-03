@@ -52,7 +52,7 @@ const Banner = () => {
 
               className="carousel-item relative w-full h-[90vh] bg-top bg-no-repeat">
               {/*Button and form on slider*/}
-              <div className="flex lg:gap-44 items-center">
+              <div className="lg:flex lg:gap-44 items-center">
                 <motion.div
                   initial={{ x: -150, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
