@@ -77,7 +77,7 @@ const OurTeam = () => {
         }}
       >
         {teams?.map((team) => (
-          <SwiperSlide key={team.id} className="flex justify-center mb-12 mt-12">
+          <SwiperSlide key={team.id} className="flex justify-center mb-12 mt-12 text-gray-500">
             <div className="card bg-base-100 shadow-xl">
               <figure className="px-4 pt-4">
                 <Image src={team.image} alt="team" className="rounded-xl" width={400} height={400} />

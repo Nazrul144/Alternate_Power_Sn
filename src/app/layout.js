@@ -40,15 +40,15 @@ export default function RootLayout({ children }) {
 
       <body className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} antialiased`}>
         <div>
-          <Navbar />
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          />
-          {children}
-          <Footer />
+
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+            <div className="antialiased">
+              <Navbar />
+              <main>{children}</main>
+              <Footer />
+            </div>
+            <ToastContainer position="top-center" />
+          </ThemeProvider>
         </div>
         <ToastContainer position="top-center" />
 

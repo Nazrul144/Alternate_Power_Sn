@@ -34,7 +34,7 @@ const CustomerReviews = () => {
           transition={{ duration: 1 }}
           viewport={{ amount: 0.3 }}
           className="bg-transparent border-[0.1px] border-orange-950 p-2 rounded-lg shadow-xl w-full lg:w-1/2 h-auto lg:h-80 flex flex-col items-center justify-center">
-          <h2 className=" text-sm lg:text-xl lg:mb-2 text-center">Excellent electrician. Installed an inverter for me in under 2 days that works perfectly and subsequently did other perfect electrical work for me. Highly recommended</h2>
+          <h2 className=" text-sm lg:text-xl lg:mb-2 text-center text-black">Excellent electrician. Installed an inverter for me in under 2 days that works perfectly and subsequently did other perfect electrical work for me. Highly recommended</h2>
           <h4 className='flex gap-1 mb-4'>
             <FaStar />
             <FaStar />

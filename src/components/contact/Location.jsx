@@ -23,7 +23,7 @@ const Location = () => {
               <div className="bg-[#D1A054] flex justify-center items-center ">
                 <FcCallback className="text-2xl font-extrabold mt-2 mb-2 " />
               </div>
-              <div className="bg-gray-200 w-[350px] mx-auto mb-3">
+              <div className="bg-gray-200 w-[350px] mx-auto mb-3 text-gray-500">
                 <h1 className="font-extrabold text-xl text-center pt-12 ">Phone</h1>
                 <h1 className="text-center pb-1">Office 021)0018698</h1>
                 <h1 className="text-center pb-48">Office (+27) 633193323</h1>
@@ -36,7 +36,7 @@ const Location = () => {
               <div className="bg-[#D1A054] flex justify-center items-center ">
                 <IoLocationOutline className="text-2xl font-extrabold mt-2 mb-2 " />
               </div>
-              <div className="bg-gray-200 w-[350px] mx-auto mb-3">
+              <div className="bg-gray-200 w-[350px] mx-auto mb-3 text-gray-500">
                 <h1 className="font-extrabold text-xl text-center pt-12 pb-4">Address</h1>
                 <h1 className="text-center pb-1">Cape Town Office</h1>
                 <h1 className="text-center pb-1">Unit 8</h1>
@@ -52,7 +52,7 @@ const Location = () => {
               <div className="bg-[#D1A054] flex justify-center items-center ">
                 <FaRegClock className="text-2xl font-extrabold mt-2 mb-2 " />
               </div>
-              <div className="bg-gray-200 w-[350px] mx-auto mb-3">
+              <div className="bg-gray-200 w-[350px] mx-auto mb-3 text-gray-500">
                 <h1 className="font-extrabold text-xl text-center pt-12 pb-4">Contact info</h1>
                 <h1 className="text-center pb-1 ">info@alter-power.co.za</h1>
                 <h1 className="text-center pb-44">sales@alter-power.co.za</h1>

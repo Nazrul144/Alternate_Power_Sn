@@ -32,7 +32,7 @@ const Testimonial = () => {
           Our customers love our services! Here's what they have to say about us.{" "}
         </p>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12 mb-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12 mb-12 text-gray-500">
         {testimonials.map((item) => (
           <div key={item.id} className="card bg-base-100 w-full border-[1px] border-gray-200 rounded-lg h-96 p-12 mx-auto ">
             <div className="flex items-center justify-between ">

@@ -13,7 +13,7 @@ const FAQ = () => {
             viewport={{ amount: 0.3 }}
             className='container mx-auto mt-20'>
             <h1 className="border-t-2 border-b-2 border-cyan-700 text-center font-extrabold w-80 text-2xl mx-auto mt-2 mb-16 text-[#FF3811]">Frequently Asked Questions</h1>
-            <div>
+            <div className='text-gray-500'>
                 <Accordion
                     type="single"
                     collapsible

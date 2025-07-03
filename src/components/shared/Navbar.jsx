@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
+import { ModeToggle } from "../mode-toggoler";
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -64,6 +65,7 @@ const Navbar = () => {
           <div className="flex space-x-3 items-center">
             <div className="avatar">
             </div>
+            <ModeToggle/>
             <FaWhatsapp className="text-3xl text-green-700 font-bold" />
             <Link href={"/login"}>
               <h1 className="font-bold">Call Now: 068 319 3323</h1>

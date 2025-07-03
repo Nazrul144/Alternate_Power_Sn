@@ -20,9 +20,9 @@ const Footer = () => {
             <Image className="hidden lg:block" src="/logo.png" alt="Logo" width={100} height={60} />
           </Link>
           <p>
-            Edwin Diaz is a software and web <br />
-            technologies engineer, a life coach <br />
-            trainer who is also a serial.
+            Privacy Policy Terms <br /> & Conditions <br />
+            Refund Policy <br />
+
           </p>
           {/*Social Link*/}
           <div className="flex space-x-4 mt-4">
