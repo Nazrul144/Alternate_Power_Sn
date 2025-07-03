@@ -1,10 +1,17 @@
+'use client'
 import React from 'react'
 import { Button } from '../ui/button'
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent, } from '../ui/accordion'
+import { motion } from "motion/react"
 
 const FAQ = () => {
     return (
-        <div className='container mx-auto mt-20'>
+        <motion.div
+            initial={{ opacity: 0, y: 150 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ amount: 0.3 }}
+            className='container mx-auto mt-20'>
             <h1 className="border-t-2 border-b-2 border-cyan-700 text-center font-extrabold w-80 text-2xl mx-auto mt-2 mb-16 text-[#FF3811]">Frequently Asked Questions</h1>
             <div>
                 <Accordion
@@ -51,7 +58,7 @@ const FAQ = () => {
                     </AccordionItem>
                 </Accordion>
             </div>
-        </div >
+        </motion.div >
     )
 }
 

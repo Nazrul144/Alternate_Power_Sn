@@ -1,12 +1,20 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaFacebook, FaGoogle, FaInstagramSquare, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { motion } from "motion/react"
+
 
 const Footer = () => {
   return (
     <div>
-      <footer className="footer bg-purple-950 text-white lg:flex lg:gap-44 pt-6 justify-center">
+      <motion.footer
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ amount: 0.3 }}
+        className="footer bg-purple-950 text-white lg:flex lg:gap-44 pt-6 justify-center">
         <aside>
           <Link href="/">
             <Image className="hidden lg:block" src="/logo.png" alt="Logo" width={100} height={60} />
@@ -59,7 +67,7 @@ const Footer = () => {
           <Link href={'/'} className="link link-hover">Feedback</Link>
           <Link href={'/'} className="link link-hover">Accessibility</Link>
         </nav>
-      </footer>
+      </motion.footer>
     </div>
   );
 };

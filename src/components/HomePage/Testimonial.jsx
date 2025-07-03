@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { IoIosStarOutline } from "react-icons/io";
+import { motion } from "motion/react"
 
 const Testimonial = () => {
   const [testimonials, setTestimonials] = useState([])
@@ -18,8 +19,13 @@ const Testimonial = () => {
   }, [])
 
   return (
-    <div className="container mx-auto">
-      <div className="">
+    <motion.div
+      initial={{ opacity: 0, y: 150 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ amount: 0.3 }}
+      className="container mx-auto">
+      <div className="mt-16">
         <h1 className="border-t-2 border-b-2 border-cyan-700 text-center font-extrabold w-40 text-2xl mx-auto mt-2 mb-16 text-[#FF3811]">Testimonial</h1>
         <h1 className="text-center font-bold text-4xl mb-4">What Customer Says</h1>
         <p className="text-center">
@@ -62,7 +68,7 @@ const Testimonial = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

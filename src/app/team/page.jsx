@@ -7,10 +7,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { FaFacebook } from "react-icons/fa6";
-
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { FaInstagramSquare, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
+import { motion } from "motion/react"
 
 const OurTeam = () => {
   const [teams, setTeams] = useState([]);
@@ -29,7 +29,12 @@ const OurTeam = () => {
   console.log(teams); // Check the data in console
 
   return (
-    <div className="container mx-auto mt-12 mb-12">
+    <motion.div
+      initial={{ opacity: 0, y: 150 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ amount: 0.3 }}
+      className="container mx-auto mt-12 mb-12">
       <div className="flex justify-center items-center">
         {loading && <span className="loading loading-bars loading-lg"></span>}
       </div>
@@ -43,7 +48,7 @@ const OurTeam = () => {
         </p>
       </div>
       <Swiper
-        spaceBetween={15} 
+        spaceBetween={15}
         slidesPerView={3}
         centeredSlides={true}
         autoplay={{
@@ -91,7 +96,7 @@ const OurTeam = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </motion.div>
   );
 };
 
