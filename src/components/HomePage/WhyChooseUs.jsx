@@ -27,7 +27,7 @@ const WhyChooseUs = () => {
         viewport={{ amount: 0.3 }}
         className="grid grid-cols-2 lg:grid-cols-6 gap-6 mt-12">
         <div
-          className="border-[1px] border-gray-300 rounded-lg flex flex-col items-center p-4">
+          className="border-[1px] border-gray-300 rounded-lg flex flex-col items-center p-4 hover:bg-red-200">
           <Image className="mt-6" width={100} height={100} alt="logo" src="/assets/icons/group.svg" />
           <p className="text-center mt-2">Skilled Professionals</p>
         </div>
