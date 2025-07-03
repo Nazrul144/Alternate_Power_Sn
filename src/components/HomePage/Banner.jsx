@@ -4,6 +4,7 @@ import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Label } from "../ui/label";
 import { FaLongArrowAltRight, FaStar } from "react-icons/fa";
 import Link from "next/link";
+import { motion } from "motion/react"
 
 const Banner = () => {
 
@@ -39,7 +40,17 @@ const Banner = () => {
               className="carousel-item relative w-full h-[90vh] bg-top bg-no-repeat">
               {/*Button and form on slider*/}
               <div className="flex lg:gap-44 items-center">
-                <div>
+                <motion.div
+                  initial={{ x: -150, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{
+                    delay: 1,
+                    x: { type: "spring", stiffness:60 },
+                    opacity: { duration: 1 },
+                    ease: "easeIn",
+                    duration: 1,
+                  }}
+                >
                   <div className="h-full w-full flex items-center lg:pl-36">
                     <div className="px-2">
                       <h1 className="text-4xl font-bold text-white">{slide.title}</h1>
@@ -57,9 +68,19 @@ const Banner = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
                 {/*Contact Form*/}
-                <div >
+                <motion.div
+                  initial={{ x: 150, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{
+                    delay: 1,
+                    x: { type: "spring", stiffness:60 },
+                    opacity: { duration: 1 },
+                    ease: "easeIn",
+                    duration: 1,
+                  }}
+                >
                   {/* Form*/}
                   <div className="bg-transparent border-[1px] border-sky-200 shadow-xl p-12 my-12 rounded-lg lg:px-32 ">
                     <form onSubmit={handleFormSubmit}>
@@ -139,7 +160,7 @@ const Banner = () => {
                       </div>
                     </form>
                   </div>
-                </div>
+                </motion.div>
               </div>
               <div className="absolute flex bottom-12 right-12 space-x-4 ">
                 <a href={slide.prev} className="btn btn-circle bg-primary outline-none text-white">
