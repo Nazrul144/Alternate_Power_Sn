@@ -5,6 +5,7 @@ import { Label } from "../ui/label";
 import { FaLongArrowAltRight, FaStar } from "react-icons/fa";
 import Link from "next/link";
 import { motion } from "motion/react"
+import { toast } from "react-toastify";
 
 const Banner = () => {
 
@@ -12,16 +13,28 @@ const Banner = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+
+    // Validate that the service is selected
+    if (!service) {
+      toast.error("Please Select a service");
+      return; // Prevent form submission if service is not selected
+    }
+
+    // Collect form data
     const formData = {
       first_name: e.target.first_name.value,
       last_name: e.target.last_name.value,
       email: e.target.from_email.value,
       phone: e.target.phone.value,
-      service: service
+      service: service,
+    };
+    setService(formData)
+    e.target.reset();  
 
-    }
-    console.log(formData);
+    toast.success("Successfully submitted your details!");
   }
+
+  console.log(service)
 
   return (
     <div className="mt-[75px]">
@@ -45,7 +58,7 @@ const Banner = () => {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{
                     delay: 1,
-                    x: { type: "spring", stiffness:60 },
+                    x: { type: "spring", stiffness: 60 },
                     opacity: { duration: 1 },
                     ease: "easeIn",
                     duration: 1,
@@ -75,7 +88,7 @@ const Banner = () => {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{
                     delay: 1,
-                    x: { type: "spring", stiffness:60 },
+                    x: { type: "spring", stiffness: 60 },
                     opacity: { duration: 1 },
                     ease: "easeIn",
                     duration: 1,
