@@ -11,14 +11,14 @@ const ServiceDetails = () => {
                             <img src={house.image} alt='image' className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" />
                         </div>
                         <div className="flex flex-col justify-center p-3 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-                            <h1 className="text-4xl mb-6 font-bold text-amber-300 ">{house.estate_title}</h1>
-                            <p className="font-semibold text-xl mb-4">{house.description}</p>
+                            <h1 className="text-4xl mb-6 font-bold text-amber-300 ">Title</h1>
+                            <p className="font-semibold text-xl mb-4">Description</p>
 
 
-                            <li className="font-semibold text-xl"> <span className="text-blue-400">Area:</span> {house.area} sq feet.</li>
-                            <li className="font-semibold text-xl"> <span className="text-blue-400">Price:</span> {house.price} TK.</li>
-                            <li className="font-semibold text-xl"> <span className="text-blue-400">Location:</span> {house.location}.</li>
-                            <li className="font-semibold text-xl"> <span className="text-blue-400">Facilities:</span> {house.facilities}.</li>
+                            <li className="font-semibold text-xl"> <span className="text-blue-400">Area:</span> </li>
+                            <li className="font-semibold text-xl"> <span className="text-blue-400">Price:</span> </li>
+                            <li className="font-semibold text-xl"> <span className="text-blue-400">Location:</span> </li>
+                            <li className="font-semibold text-xl"> <span className="text-blue-400">Facilities:</span> </li>
 
                             <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start mt-2">
                                 <Link to='/' rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-bold rounded bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50  hover:bg-sky-700 hover:text-white duration-1000 ease-in-out">Back to home</Link>
