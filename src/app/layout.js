@@ -38,7 +38,9 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/assets/logo.svg" />
       </head>
 
-      <body className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} antialiased`}
+      
+      >
         <div>
 
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>

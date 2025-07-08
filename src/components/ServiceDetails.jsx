@@ -1,7 +1,12 @@
+'use client'
+import Image from 'next/image';
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-const ServiceDetails = () => {
+const ServiceDetails = ({params}) => {
+
+    const { id } = params;
+    console.log(id)
 
     const [service, setService] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -11,7 +16,7 @@ const ServiceDetails = () => {
             try {
                 const response = await fetch('/services.json');
                 const data = await response.json();
-                // Assuming you want to get the first service for demonstration
+                
                 setService(data[0]);
             } catch (error) {
                 console.error("Error fetching service details:", error);
@@ -29,7 +34,7 @@ const ServiceDetails = () => {
                 <section className="bg-gray-600 dark:bg-gray-100 text-gray-100">
                     <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                         <div className="flex items-center justify-center p-6 mt-4 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
-                            <img alt='image' className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" />
+                            <Image alt='image' className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" />
                         </div>
                         <div className="flex flex-col justify-center p-3 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
                             <h1 className="text-4xl mb-6 font-bold text-amber-300 ">Title</h1>
