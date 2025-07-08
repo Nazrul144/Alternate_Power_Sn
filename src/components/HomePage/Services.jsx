@@ -51,7 +51,7 @@ const Services = () => {
                 <h2 className="card-title text-2xl">{service.name}</h2>
                 <p className='text-justify'>{service.description}</p>
               </div>
-              <Button className='bg-cyan-700 text-white hover:bg-cyan-800'>
+              <Button className='bg-[#ff3811] text-white hover:bg-cyan-800'>
                 <Link href={`/services/${service.id}`}>View Details</Link>
               </Button>
             </motion.div>
