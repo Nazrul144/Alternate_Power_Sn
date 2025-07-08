@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { motion } from "motion/react"
 import { Button } from '../ui/button'
+import Link from 'next/link'
 
 const Services = () => {
 
@@ -50,7 +51,7 @@ const Services = () => {
                 <h2 className="card-title text-2xl">{service.name}</h2>
                 <p className='text-justify'>{service.description}</p>
               </div>
-              <Button>ViewDetails</Button>
+              <Link>ViewDetails</Link>
             </motion.div>
           ))
           
