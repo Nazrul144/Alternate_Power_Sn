@@ -51,7 +51,7 @@ const Services = () => {
                 <h2 className="card-title text-2xl">{service.name}</h2>
                 <p className='text-justify'>{service.description}</p>
               </div>
-              <Link>ViewDetails</Link>
+              <Link href={`/service/${service.id}`}>ViewDetails</Link>
             </motion.div>
           ))
           
