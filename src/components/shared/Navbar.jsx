@@ -12,19 +12,19 @@ const Navbar = () => {
 
   const [scrollY, setScrollY] = useState(0);
 
-  useEffect(() => {
+   useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const handleScroll = () => {
+        setScrollY(window.scrollY);
+      };
+      window.addEventListener('scroll', handleScroll);
 
-    const handleScroll = () => {
-      setScrollY(window.scrollY)
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
     }
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-
-
-  }, [])
+  }, []);
+  
 
   return (
     <div className={`${scrollY > 100 ? 'bg-[#D1A054]' : 'bg-black/30'} transition-colors duration-500  shadow-xl fixed z-10 w-full top-0`}>

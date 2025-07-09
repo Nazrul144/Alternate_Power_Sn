@@ -41,7 +41,7 @@ const Services = () => {
               key={service.id} className="card bg-base-100 shadow-sm border-[1px] border-sky-300 hover:bg-sky-100 ease-in duration-500 text-gray-500">
               <figure className="px-10 pt-10">
                 <Image
-                  src={service.image}
+                  src={service.image ||'/assets/default.jpg'}
                   alt="Services_image"
                   width={500}
                   height={500}
@@ -51,9 +51,9 @@ const Services = () => {
                 <h2 className="card-title text-2xl">{service.name}</h2>
                 <p className='text-justify'>{service.description}</p>
               </div>
-              {/* <Button className='bg-[#ff3811] text-white px-4 py-2 rounded-md transition-all ease-in-out duration-500 hover:bg-[#ff5722]'>
+              <Button className='bg-[#ff3811] text-white px-4 py-2 rounded-md transition-all ease-in-out duration-500 hover:bg-[#ff5722]'>
                 <Link href={`/services/${service.id}`}>View Details</Link>
-              </Button> */}
+              </Button>
             </motion.div>
           ))
           
