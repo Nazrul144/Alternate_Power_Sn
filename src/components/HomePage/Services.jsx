@@ -51,9 +51,9 @@ const Services = () => {
                 <h2 className="card-title text-2xl">{service.name}</h2>
                 <p className='text-justify'>{service.description}</p>
               </div>
-              <Button className='bg-[#ff3811] text-white px-4 py-2 rounded-md transition-all ease-in-out duration-500 hover:bg-[#ff5722]'>
+              {/* <Button className='bg-[#ff3811] text-white px-4 py-2 rounded-md transition-all ease-in-out duration-500 hover:bg-[#ff5722]'>
                 <Link href={`/services/${service.id}`}>View Details</Link>
-              </Button>
+              </Button> */}
             </motion.div>
           ))
           
