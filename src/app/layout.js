@@ -33,7 +33,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="carDoctorTheme">
+    <html lang="en" data-theme="carDoctorTheme" >
       <head>
         <link rel="icon" href="/assets/logo.svg" />
       </head>

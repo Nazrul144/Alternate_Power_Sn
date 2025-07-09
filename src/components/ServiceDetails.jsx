@@ -3,10 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
-const ServiceDetails = ({params}) => {
+const ServiceDetails = () => {
 
-    const { id } = params;
-    console.log(id)
+
 
     const [service, setService] = useState(null);
     const [loading, setLoading] = useState(true);
