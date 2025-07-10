@@ -99,6 +99,10 @@ const links = [
     title: "Contact",
     path: "/contact",
   },
+  {
+    title: "Posts",
+    path: "/post",
+  },
 ];
 
 export default Navbar;
