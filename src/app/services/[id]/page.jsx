@@ -4,7 +4,7 @@ import React from 'react'
 const PageDetails = () => {
   return (
     <div>
-        <ServiceDetails/>
+        {/* <ServiceDetails/> */}
     </div>
   )
 }
