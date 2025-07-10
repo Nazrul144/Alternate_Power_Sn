@@ -155,15 +155,27 @@ const Banner = () => {
                         <RadioGroup value={service} onValueChange={setService}>
                           <div className="flex items-center gap-3 text-white">
                             <RadioGroupItem value="electrical_call" id="r1" name="service" />
-                            <Label htmlFor="r1" >24/7 Electrical Call Out</Label>
+                            <Label htmlFor="r1" >Electrical Installations & 24/7 Call-Outs </Label>
                           </div>
                           <div className="flex items-center gap-3 text-white">
                             <RadioGroupItem value="inverter_installtion" id="r2" name="service" />
-                            <Label htmlFor="r2">Inverter Installation</Label>
+                            <Label htmlFor="r2">Solar & Battery Backup Systems </Label>
                           </div>
                           <div className="flex items-center gap-3 text-white">
                             <RadioGroupItem value="solar_installation" id="r3" name="service" />
-                            <Label htmlFor="r3">Solar Installation</Label>
+                            <Label htmlFor="r3">Waterproofing & Roof Repairs</Label>
+                          </div>
+                          <div className="flex items-center gap-3 text-white">
+                            <RadioGroupItem value="white_boxing" id="r3" name="service" />
+                            <Label htmlFor="r3">White Boxing & Commercial Painting</Label>
+                          </div>
+                          <div className="flex items-center gap-3 text-white">
+                            <RadioGroupItem value="plumbing_service" id="r3" name="service" />
+                            <Label htmlFor="r3">Plumbing Services</Label>
+                          </div>
+                          <div className="flex items-center gap-3 text-white">
+                            <RadioGroupItem value="carpentry" id="r3" name="service" />
+                            <Label htmlFor="r3">Carpentry & Property Maintenance</Label>
                           </div>
                         </RadioGroup>
                       </div>

@@ -14,7 +14,7 @@ const WhyChooseUs = () => {
       >
         <h1 className="border-t-2 border-b-2 border-cyan-700 text-center font-extrabold w-40 text-2xl mx-auto mt-2 mb-4 text-[#FF3811]">
           Core Features</h1>
-        <h1 className="text-center font-extrabold text-4xl mb-4">Why Choose Us</h1>
+        <h1 className="text-center font-extrabold text-4xl mb-4">Why APS?</h1>
         <p className="text-center text-lg">
           We offer reliable, high-quality services tailored to meet your needs, backed <br />
           by a team of skilled professionals and advanced solutions.
