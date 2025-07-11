@@ -39,8 +39,6 @@ const About = () => {
         }
         setService(formData)
         toast.success('Successfully submitted your details!')
-
-
     }
 
     console.log(service)
@@ -52,7 +50,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
                 viewport={{ amount: 0.3 }}
-                className='grid grid-cols-1 lg:grid-cols-2  px-2 '>
+                className='grid grid-cols-1 lg:grid-cols-2 px-4'>
                 <motion.div
                     initial={{ x: -150, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
@@ -65,7 +63,7 @@ const About = () => {
                     }}
                     className='relative mt-24'>
                     <div>
-                        <Image className='rounded-lg' src='/assets/images/about_us/person.jpg' alt='Person' width={600} height={800} />
+                        <Image className='rounded-lg max-w-full' src='/assets/images/about_us/person.jpg' alt='Person' width={600} height={800} />
                     </div>
                     <div className='absolute top-40 left-[380px]'>
                         <Image className='border-8 border-white rounded-lg top-20' src='/assets/images/about_us/parts.jpg' alt='Parts' width={300} height={300} />
@@ -74,7 +72,6 @@ const About = () => {
                 <motion.div
                     initial={{ x: 150, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-
                     transition={{
                         delay: 1,
                         x: { type: "spring", stiffness: 60 },
@@ -82,21 +79,55 @@ const About = () => {
                         ease: "easeIn",
                         duration: 1,
                     }}
-
-
-
                     className='text-justify'>
-                    <h1 className="font-extrabold text-2xl mx-auto mt-2 mb-8 text-[#FF3811]">About Us</h1>
-                    <p className='text-xl text-gray-500'>We are a trusted electrical services provider based in Cape Town, specializing in a wide range of electrical and solar solutions for residential, commercial, and industrial customers. <br />
-                        Founded in 2015, Alternate Power Solutions (APS) started as a family-owned business focusing on off-the-grid power solutions, electrical backup systems, and solar energy solutions. <br />
-                        With over 9 years of experience, we are proud of our reputation for delivering practical, affordable, and sustainable energy solutions. Whether it's providing solar panel installations, solar battery backups, or solar-powered solutions, we ensure that our clients enjoy reliable and cost-effective power without the need for additional financial burdens. <br />
-                        Our goal is to help you switch to a more sustainable and eco-friendly energy source, all while keeping the cost manageable. Additionally, we offer expert waterproofing & roof repair services to safeguard your property from leaks and damage, and provide plumbing services for installations, repairs, and maintenance, ensuring that your home or business runs smoothly.
+                    <h1 className="font-extrabold text-2xl text-center mx-auto mt-2 mb-8 text-[#FF3811]">About Us</h1>
+                    <h2 className="text-xl text-[#FF3811] italic text-center mt-2 mb-8">Your Partner in Power & Property Solutions</h2>
+
+                    <p className="text-lg text-gray-600 mt-4">
+                        Alternate Power Solutions (APS) is a Cape Town-based service provider offering comprehensive electrical, solar, property maintenance, plumbing, carpentry, roofing, and commercial painting solutions for residential, commercial, and industrial clients.
                     </p>
-                    <div className='mt-6'>
-                        <Dialog >
+
+                    <h3 className="text-xl font-semibold text-[#FF3811] mt-8">Our Origins</h3>
+                    <p className="text-lg text-gray-600">
+                        Founded in 2015 as a family-run business, APS began with a focus on off-grid power, inverter backup systems, and solar installations. Over the past decade, we've built a solid reputation for delivering practical and affordable energy solutions.
+                    </p>
+
+                    <h3 className="text-xl font-semibold text-[#FF3811] mt-8">How We’ve Grown</h3>
+                    <ul className="list-disc pl-6 text-gray-600">
+                        <li>Electrical Installations & 24/7 Call-Outs</li>
+                        <li>Solar & Battery Backup Systems</li>
+                        <li>Waterproofing & Roof Repairs</li>
+                        <li>White Boxing & Commercial Painting</li>
+                        <li>Plumbing Services</li>
+                        <li>Carpentry & Property Maintenance</li>
+                    </ul>
+
+                    <h3 className="text-xl font-semibold text-[#FF3811] mt-8">Who We Work With</h3>
+                    <ul className="list-disc pl-6 text-gray-600">
+                        <li>Property Developers</li>
+                        <li>Commercial & Retail Landlords</li>
+                        <li>Facilities Managers</li>
+                        <li>Industrial Sites & Warehouses</li>
+                        <li>Residential Clients</li>
+                    </ul>
+
+                    <h3 className="text-xl font-semibold text-[#FF3811] mt-8">Why APS?</h3>
+                    <ul className="list-disc pl-6 text-gray-600">
+                        <li>One contractor for all your needs</li>
+                        <li>Fast, responsive, and professional</li>
+                        <li>Hands-on leadership and skilled teams</li>
+                        <li>Cost-effective and future-ready solutions</li>
+                        <li>Proudly based in Cape Town, serving the Western Cape</li>
+                    </ul>
+
+                    <h3 className="text-xl font-semibold text-[#FF3811] mt-8">Let’s Work Together</h3>
+                    <p className="text-lg text-gray-600 mb-4">Whether you're planning a solar installation, preparing a site for leasing, or fixing a leaking roof — APS has the skills, tools, and track record to get it done right.</p>
+
+                    <div className="mt-6">
+                        <Dialog>
                             <form>
                                 <DialogTrigger asChild>
-                                    <Button variant="outline" className="bg-[#ff3811] text-white">Get A Free Quote</Button>
+                                    <Button variant="outline" className="bg-[#ff3811] text-white hover:bg-[#e04a10] rounded-md">Get A Free Quote</Button>
                                 </DialogTrigger>
                                 <DialogContent className="sm:max-w-[775px] max-h-[80vh] overflow-y-auto bg-sky-900">
                                     <DialogHeader>
@@ -107,12 +138,11 @@ const About = () => {
                                     <div className="grid gap-4">
                                         <div className="grid gap-3">
                                             {/*Contact Form*/}
-                                            <div >
+                                            <div>
                                                 {/* Form*/}
-                                                <div className="bg-transparent border-[1px] border-sky-200 shadow-xl p-12 my-12 rounded-lg lg:px-32 ">
+                                                <div className="bg-transparent border-[1px] border-sky-200 shadow-xl p-12 my-12 rounded-lg lg:px-32">
                                                     <form onSubmit={handleFormSubmit}>
-                                                        <div className="w-full flex flex-col space-y-4"> {/* Using flex column to stack inputs */}
-
+                                                        <div className="w-full flex flex-col space-y-4">
                                                             {/* First Name */}
                                                             <div className="w-full">
                                                                 <label htmlFor="user_name" className="block text-sm font-medium text-white">First Name</label>
@@ -169,20 +199,32 @@ const About = () => {
                                                             <RadioGroup value={service} onValueChange={setService}>
                                                                 <div className="flex items-center gap-3 text-white">
                                                                     <RadioGroupItem value="electrical_call" id="r1" name="service" />
-                                                                    <Label htmlFor="r1" >24/7 Electrical Call Out</Label>
+                                                                    <Label htmlFor="r1" >Electrical Installations & 24/7 Call-Outs </Label>
                                                                 </div>
                                                                 <div className="flex items-center gap-3 text-white">
                                                                     <RadioGroupItem value="inverter_installtion" id="r2" name="service" />
-                                                                    <Label htmlFor="r2">Inverter Installation</Label>
+                                                                    <Label htmlFor="r2">Solar & Battery Backup Systems </Label>
                                                                 </div>
                                                                 <div className="flex items-center gap-3 text-white">
                                                                     <RadioGroupItem value="solar_installation" id="r3" name="service" />
-                                                                    <Label htmlFor="r3">Solar Installation</Label>
+                                                                    <Label htmlFor="r3">Waterproofing & Roof Repairs</Label>
+                                                                </div>
+                                                                <div className="flex items-center gap-3 text-white">
+                                                                    <RadioGroupItem value="white_boxing" id="r3" name="service" />
+                                                                    <Label htmlFor="r3">White Boxing & Commercial Painting</Label>
+                                                                </div>
+                                                                <div className="flex items-center gap-3 text-white">
+                                                                    <RadioGroupItem value="plumbing_service" id="r3" name="service" />
+                                                                    <Label htmlFor="r3">Plumbing Services</Label>
+                                                                </div>
+                                                                <div className="flex items-center gap-3 text-white">
+                                                                    <RadioGroupItem value="carpentry" id="r3" name="service" />
+                                                                    <Label htmlFor="r3">Carpentry & Property Maintenance</Label>
                                                                 </div>
                                                             </RadioGroup>
                                                         </div>
                                                         <div className="relative">
-                                                            <input className="btn btn-primary text-white w-full mt-6 " type="submit" value="Get 100% Free Quote Now" />
+                                                            <input className="btn btn-primary text-white w-full mt-6" type="submit" value="Get 100% Free Quote Now" />
                                                             <FaLongArrowAltRight className="absolute top-[41px] right-24 text-white" />
                                                         </div>
                                                     </form>
@@ -190,13 +232,13 @@ const About = () => {
                                             </div>
                                         </div>
                                     </div>
-                                
                                 </DialogContent>
                             </form>
                         </Dialog>
                     </div>
-                    <h1 className='mt-2 font-bold'>Or call us</h1>
-                    <h1 className='font-bold text-sky-600 text-xl'>068 319 3323</h1>
+
+                    <h1 className="mt-2 font-bold">Or call us</h1>
+                    <h1 className="font-bold text-sky-600 text-xl">068 319 3323</h1>
                 </motion.div>
             </motion.div>
         </div>
