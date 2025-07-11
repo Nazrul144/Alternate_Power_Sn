@@ -18,6 +18,7 @@ import { RadioGroup, RadioGroupItem } from '../ui/radio-group';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import { motion } from "motion/react"
+import Link from 'next/link';
 
 const About = () => {
 
@@ -122,6 +123,11 @@ const About = () => {
 
                     <h3 className="text-xl font-semibold text-[#FF3811] mt-8">Let’s Work Together</h3>
                     <p className="text-lg text-gray-600 mb-4">Whether you're planning a solar installation, preparing a site for leasing, or fixing a leaking roof — APS has the skills, tools, and track record to get it done right.</p>
+                    <Button  as="a"
+                        variant="outline"
+                        className="bg-[#ff3811] text-white hover:bg-[#e04a10] rounded-md">
+                        <Link href="/contact">Get A Free Quote</Link>
+                    </Button>
 
                     <div className="mt-6">
                         <Dialog>
@@ -238,7 +244,7 @@ const About = () => {
                     </div>
 
                     <h1 className="mt-2 font-bold">Or call us</h1>
-                    <h1 className="font-bold text-sky-600 text-xl">068 319 3323</h1>
+                    <a href="tel:+0683193323" className="font-bold text-sky-600 text-xl">068 319 3323</a>
                 </motion.div>
             </motion.div>
         </div>
