@@ -91,7 +91,7 @@ const About = () => {
                     <Button  as="a"
                         variant="outline"
                         className="bg-[#ff3811] text-white hover:bg-[#e04a10] rounded-md">
-                        <Link href="/contact">Get A Free Quote</Link>
+                        <Link href="/contact">Contact for Quote & Visit</Link>
                     </Button>
 
 
