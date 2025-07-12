@@ -18,7 +18,6 @@ const Services = () => {
     loadData();
   }, []); // No need for window check here
 
-  console.log(services);
 
   return (
     <div className='container mx-auto mt-[100px] mb-16'>
