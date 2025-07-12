@@ -3,7 +3,6 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 
 import { Button } from "@/components/ui/button"
-import { toast } from 'react-toastify';
 import { motion } from "motion/react"
 import Link from 'next/link';
 
