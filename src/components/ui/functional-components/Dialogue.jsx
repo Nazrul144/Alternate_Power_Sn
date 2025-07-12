@@ -44,7 +44,7 @@ const Dialogue = () => {
             <Dialog>
                 <form>
                     <DialogTrigger asChild>
-                        <Button variant="outline" className="bg-[#ff3811] text-white hover:bg-[#e04a10] rounded-md">Get A Free Quote</Button>
+                        <Button  className="bg-transparent border-[0.5px] border-white text-white hover:bg-[#e04a10] rounded-md">Get A Free Quote</Button>
                     </DialogTrigger>
                     <DialogContent className="sm:max-w-[775px] max-h-[80vh] overflow-y-auto bg-sky-900">
                         <DialogHeader>
