@@ -49,7 +49,7 @@ const Services = () => {
               </figure>
               <div className="card-body items-center text-center">
                 <h2 className="card-title text-2xl">{service.name}</h2>
-                <p className='text-justify'>{service.description}</p>
+                <p className='text-justify'>{service.description.substring(0, 110)+"....."}</p>
               </div>
               <Button className='bg-[#ff3811] text-white px-4 py-2 rounded-md transition-all ease-in-out duration-500 hover:bg-[#ff5722]'>
                 <Link href={`/services/${service.id}`}>View Details</Link>

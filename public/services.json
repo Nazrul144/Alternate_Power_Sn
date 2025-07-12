@@ -2,37 +2,37 @@
   {
     "id": "1",
     "name": "Electrical Installation",
-    "description": "Professional electrical setup for residential and commercial properties. We ensure safe and efficient wiring, lighting, and power systems to meet your needs.",
+    "description": "Our professional electrical installation services cater to both residential and commercial properties. We provide safe and efficient wiring, lighting solutions, and power system setups designed to meet your specific needs. Our certified electricians ensure compliance with all safety standards and local regulations, guaranteeing reliable and long-lasting installations. Whether it's new construction or upgrading existing electrical infrastructure, we deliver expert workmanship and timely service to keep your property powered and secure.",
     "image": "https://i.postimg.cc/J7d47VLJ/Adobe-Express-file-2.jpg"
   },
   {
     "id": "2",
     "name": "Solar & Inverter Solutions",
-    "description": "We provide efficient solar panel installations and inverter solutions for energy savings. Our systems help reduce electricity bills while supporting a sustainable environment.",
+    "description": "We specialize in efficient solar panel installations and advanced inverter solutions to help you save on energy costs while reducing your environmental footprint. Our custom-designed systems maximize energy generation and optimize power usage for homes and businesses. With our expert guidance and high-quality equipment, you can enjoy sustainable energy, lower electricity bills, and increased energy independence. We also provide maintenance and support to ensure your solar and inverter systems operate at peak performance year-round.",
     "image": "https://i.postimg.cc/85c3CYRX/Adobe-Express-file-3.jpg"
   },
   {
     "id": "3",
     "name": "Battery Backup Systems",
-    "description": "Reliable battery backup systems to ensure continuous power supply during outages. Our solutions guarantee your home or business stays powered during critical times.",
+    "description": "Our reliable battery backup systems are designed to provide uninterrupted power during outages, keeping your home or business running smoothly when it matters most. We offer scalable solutions tailored to your energy requirements, ensuring continuous operation of critical appliances and systems. With high-capacity batteries and smart energy management, our systems improve resilience against power disruptions, enhance safety, and provide peace of mind. Our team handles installation, monitoring, and maintenance for optimal reliability.",
     "image": "https://i.postimg.cc/mD2xHw9J/Adobe-Express-file-4.jpg"
   },
   {
     "id": "4",
     "name": "Waterproofing & Roof Repair",
-    "description": "Expert waterproofing and roof repairs to protect your property from leaks and damage. We offer comprehensive services to safeguard your home or business from weather-related issues.",
+    "description": "Protect your property from leaks, water damage, and structural deterioration with our expert waterproofing and roof repair services. We use industry-leading materials and techniques to seal roofs, walls, and foundations against moisture intrusion. Our comprehensive approach addresses existing issues and implements preventative solutions, extending the lifespan of your property and improving energy efficiency. Whether it's minor repairs or complete roof restorations, our skilled technicians deliver durable, weather-resistant results tailored to your needs.",
     "image": "https://i.postimg.cc/s2tMwMjV/Adobe-Express-file-5.jpg"
   },
   {
     "id": "5",
     "name": "Inverter Back-Up Power Installation",
-    "description": "We install back-up power solutions to keep your electricity running during loadshedding. Our systems provide uninterrupted power during blackouts, ensuring your comfort and productivity.",
+    "description": "Stay powered during loadshedding and blackouts with our inverter back-up power installation services. We design and install reliable systems that automatically switch your power supply to backup energy, ensuring seamless electricity availability. Our solutions support a range of power needs, from essential household circuits to full business operations, maintaining comfort and productivity at all times. With professional installation and ongoing support, you can trust your power backup system to perform when you need it most.",
     "image": "https://i.postimg.cc/PrqGx2Hw/Adobe-Express-file-7.jpg"
   },
   {
     "id": "6",
     "name": "Plumbing Services",
-    "description": "We offer comprehensive plumbing solutions for installations, repairs, and maintenance. From fixing leaks to installing new fixtures, we ensure efficient and reliable plumbing for your property.",
+    "description": "Our comprehensive plumbing services cover everything from installations and repairs to regular maintenance for residential and commercial properties. We fix leaks, unclog drains, install new fixtures, and upgrade plumbing systems with efficiency and precision. Using high-quality materials and industry best practices, we ensure reliable water supply and drainage, helping you avoid costly damage and downtime. Our experienced plumbers deliver prompt, professional service to keep your plumbing systems running smoothly year-round.",
     "image": "https://i.postimg.cc/k5tGHWg2/Adobe-Express-file-8.jpg"
   }
 ]
