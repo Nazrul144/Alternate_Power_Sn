@@ -8,6 +8,8 @@ const WhatsAppButton = () => {
     const phoneNumber = '8801886531287';
     const message = encodeURIComponent('Hello APS, I would like to request a quote.');
 
+    console.log(`https://wa.me/${phoneNumber}?text=${message}`);
+
     if (!visible) return null;
 
     return (

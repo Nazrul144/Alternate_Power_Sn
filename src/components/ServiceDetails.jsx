@@ -18,7 +18,7 @@ const ServiceDetails = () => {
             try {
                 const response = await fetch('/services.json');
                 const data = await response.json();
-                
+
                 setService(data);
             } catch (error) {
                 console.error("Error fetching service details:", error);
@@ -29,22 +29,22 @@ const ServiceDetails = () => {
         fetchServiceDetails();
     }, [])
 
-    const serviceDetails = service?.find((item)=> item.id === serviceId);
+    const serviceDetails = service?.find((item) => item.id === serviceId);
     console.log(serviceDetails);
 
     if (loading) {
-        return <div className="text-center mt-10">Loading...</div>;
+        return <div className='flex justify-center items-center h-screen'>
+            <span className="loading loading-bars loading-lg"></span>
+        </div>
     }
 
     return (
-        <div>
-            
+        <div className='h-full '>
             <div>
-
                 <section className="bg-gray-600 dark:bg-gray-100 text-gray-100">
-                    <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row justify-between">
+                    <div className="container flex flex-col p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row justify-between">
                         <div className="flex items-center justify-center p-6 mt-4 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
-                            <Image src={serviceDetails.image}  alt={serviceDetails.name} width={600} height={400} className='rounded-lg mt-16' />
+                            <Image src={serviceDetails.image} alt={serviceDetails.name} width={600} height={400} className='rounded-lg mt-16' />
                         </div>
                         <div className="flex flex-col justify-center p-3 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
                             <h1 className=" text-2xl mt-4 lg:text-4xl mb-6 font-bold text-amber-300 ">{serviceDetails.name}</h1>
