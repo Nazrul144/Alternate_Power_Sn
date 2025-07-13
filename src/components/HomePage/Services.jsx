@@ -52,7 +52,7 @@ const Services = () => {
                 <p className='text-justify'>{service.description.substring(0, 110)+"....."}</p>
               </div>
             
-                <Link className='bg-[#ff3811] text-white px-4 py-2 rounded-md transition-all ease-in-out duration-500 hover:bg-[#ff5722]' href={`/services/${service.id}`}>View Details</Link>
+                <Link className='bg-[#ff3811] text-white px-4 py-2  text-center rounded-md transition-all ease-in-out duration-500 hover:bg-[#ff5722]' href={`/services/${service.id}`}>View Details</Link>
              
             </motion.div>
           ))

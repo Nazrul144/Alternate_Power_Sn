@@ -62,6 +62,9 @@ const Location = () => {
           </div>
         </div>
       </div>
+
+      <h1 className="border-t-2 border-b-2 border-cyan-700 text-center font-extrabold w-40 text-xl mx-auto mt-16 mb-16">Where to Find Us</h1>
+
     </motion.div>
   );
 };
