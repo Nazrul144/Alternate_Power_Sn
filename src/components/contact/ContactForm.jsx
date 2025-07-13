@@ -30,7 +30,9 @@ const ContactForm = () => {
           console.log('FAILED...', error.text);
         },
       );
+
   };
+
 
   return (
     <div className="container mx-auto">
