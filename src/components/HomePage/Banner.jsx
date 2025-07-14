@@ -86,10 +86,10 @@ const Banner = () => {
               >
                 <div className="h-full w-full flex items-center lg:pl-36">
                   <div className="px-2">
-                    <h1 className="text-4xl font-bold text-white">{slide.title}</h1>
-                    <p className="text-white mb-2 lg:w-[500px] text-justify mt-3">{slide.description}</p>
-                    <div className="mt-6">
-                      <div className="text-4xl text-yellow-500 flex gap-2 mb-6">
+                    <h1 className=" text-2xl mt-6 lg:mt-0 lg:text-4xl font-bold text-white">{slide.title}</h1>
+                    <p className="text-white mb-2 lg:w-[500px] text-justify lg:mt-3 mt-0 px-6 lg:px-0">{slide.description}</p>
+                    <div className="lg:mt-6">
+                      <div className="lg:text-4xl text-yellow-500 flex gap-2 lg:mb-6 mb-2">
                         <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                       </div>
                       <Link href={'/blog'} className="btn btn-primary  text-white">Discover More</Link>
@@ -110,7 +110,7 @@ const Banner = () => {
                   duration: 1,
                 }}
               >
-                <div className="bg-transparent border-[1px] border-sky-200 shadow-xl p-12 my-12 rounded-lg lg:px-32 ">
+                <div className="bg-transparent border-[1px] border-sky-200 shadow-xl lg:p-12 p-4 mt-2 lg:my-12 rounded-lg lg:px-32 ">
                   <form onSubmit={sendEmail}>
                     <div className="w-full flex flex-col space-y-4">
 
@@ -163,7 +163,7 @@ const Banner = () => {
                       </div>
                     </div>
 
-                    <div className="mt-4">
+                    <div className="mt-4 ">
                       <h1 className="mb-2 font-semibold text-white">What service would you like?</h1>
                       <RadioGroup value={service} onValueChange={setService}>
                         <div className="flex items-center gap-3 text-white">

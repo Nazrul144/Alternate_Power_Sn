@@ -66,11 +66,13 @@ const Navbar = () => {
             <div className="avatar">
             </div>
             <ModeToggle/>
-            <FaWhatsapp className="text-3xl text-green-700 font-bold" />
-            <Link href={"/login"}>
-              <h1 className="font-bold">Call Now: 068 319 3323</h1>
+            <FaWhatsapp className="text-4xl text-green-700 font-bold" />
+            <div href={"/login"}>
+              <h1 className="font-bold">Call Now:
+                <a href="tel:+0683193323" className="font-bold"> 068 319 3323</a>
+              </h1>
               <h1 className="font-bold text-sky-700">Open 24/7, 365!</h1>
-            </Link>
+            </div>
           </div>
         </div>
       </div>
