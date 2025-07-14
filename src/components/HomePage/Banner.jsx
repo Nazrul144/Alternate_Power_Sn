@@ -1,40 +1,46 @@
 'use client'
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Label } from "../ui/label";
 import { FaLongArrowAltRight, FaStar } from "react-icons/fa";
 import Link from "next/link";
 import { motion } from "motion/react"
-import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 const Banner = () => {
 
   const [service, setService] = useState()
 
-  const handleFormSubmit = (e) => {
+  const form = useRef();
+
+
+  const sendEmail = (e) => {
     e.preventDefault();
+    emailjs.init(process.env.NEXT_PUBLIC_PUBLIC_ID);
 
-    // Validate that the service is selected
-    if (!service) {
-      toast.error("Please Select a service");
-      return; // Prevent form submission if service is not selected
-    }
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        form.current
+      )
+      .then(
+        () => {
+          Swal.fire({
+            title: "Your message has been sent successfully!",
+            text: "You clicked the button!",
+            icon: "success"
+          });
 
-    // Collect form data
-    const formData = {
-      first_name: e.target.first_name.value,
-      last_name: e.target.last_name.value,
-      email: e.target.from_email.value,
-      phone: e.target.phone.value,
-      service: service,
-    };
-    setService(formData)
-    e.target.reset();  
+          form.current.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
 
-    toast.success("Successfully submitted your details!");
-  }
+  };
 
-  console.log(service)
 
   return (
     <div className="mt-[75px]">
@@ -96,7 +102,7 @@ const Banner = () => {
                 >
                   {/* Form*/}
                   <div className="bg-transparent border-[1px] border-sky-200 shadow-xl p-12 my-12 rounded-lg lg:px-32 ">
-                    <form onSubmit={handleFormSubmit}>
+                    <form ref={form} onSubmit={sendEmail} >
                       <div className="w-full flex flex-col space-y-4"> {/* Using flex column to stack inputs */}
 
                         {/* First Name */}
