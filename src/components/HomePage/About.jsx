@@ -27,7 +27,7 @@ const About = () => {
                         duration: 1,
                     }}
                     className='relative lg:mt-24'>
-                    <div>
+                    <div className='sticky top-[75px]'>
                         <Image className='rounded-lg max-w-full hidden lg:block' src='/assets/images/about_us/person.jpg' alt='Person' width={600} height={800} />
                     </div>
                     <div className='absolute top-40 left-[380px]'>
