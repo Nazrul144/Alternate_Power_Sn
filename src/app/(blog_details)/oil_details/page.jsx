@@ -10,7 +10,7 @@ const PowerSolutionsElectricalMaintenancePage = () => {
           <p className="text-lg text-gray-600 mt-4">
             Essential steps for maintaining the electrical systems of your renewable energy solutions, ensuring optimal performance and longevity.
           </p>
-          <Image src="/assets/blog/power/elec_cover.jpg" width={1000} height={800} alt="Electrical System Maintenance Hero" className="w-full h-64 object-cover mt-6 rounded-lg" />
+          <Image src="/power.jpeg" width={1000} height={800} alt="Electrical System Maintenance Hero" className="w-full h-64 object-cover mt-6 rounded-lg" />
         </div>
 
         <div className="space-y-8">
@@ -22,7 +22,7 @@ const PowerSolutionsElectricalMaintenancePage = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image src="/assets/blog/power/tools_p.png" width={500} height={400} alt="Step 1: Gather Your Tools" className="w-full h-40 object-cover" />
+              {/* <Image src="/assets/blog/power/tools_p.png" width={500} height={400} alt="Step 1: Gather Your Tools" className="w-full h-40 object-cover" /> */}
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Step 1: Prepare Your Tools</h3>
                 <p className="text-gray-600 mt-2">
@@ -32,7 +32,7 @@ const PowerSolutionsElectricalMaintenancePage = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image src="/assets/blog/power/wiring.webp" width={500} height={400} alt="Step 2: Inspect Electrical Wiring" className="w-full h-40 object-cover" />
+              {/* <Image src="/assets/blog/power/wiring.webp" width={500} height={400} alt="Step 2: Inspect Electrical Wiring" className="w-full h-40 object-cover" /> */}
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Step 2: Inspect Electrical Wiring</h3>
                 <p className="text-gray-600 mt-2">
@@ -42,7 +42,7 @@ const PowerSolutionsElectricalMaintenancePage = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image src="/assets/blog/power/inverter.jpg" width={500} height={400} alt="Step 3: Clean Inverters" className="w-full h-40 object-cover" />
+              {/* <Image src="/assets/blog/power/inverter.jpg" width={500} height={400} alt="Step 3: Clean Inverters" className="w-full h-40 object-cover" /> */}
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Step 3: Clean Inverters</h3>
                 <p className="text-gray-600 mt-2">
@@ -52,7 +52,7 @@ const PowerSolutionsElectricalMaintenancePage = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image src="/assets/blog/power/inspect_battery.jpeg" width={500} height={400} alt="Step 4: Inspect Battery Health" className="w-full h-40 object-cover" />
+              {/* <Image src="/assets/blog/power/inspect_battery.jpeg" width={500} height={400} alt="Step 4: Inspect Battery Health" className="w-full h-40 object-cover" /> */}
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Step 4: Inspect Battery Health</h3>
                 <p className="text-gray-600 mt-2">
@@ -62,7 +62,7 @@ const PowerSolutionsElectricalMaintenancePage = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image src="/assets/blog/power/test_electrial_condition.jpg" width={500} height={400} alt="Step 5: Test Electrical Connections" className="w-full h-40 object-cover" />
+              {/* <Image src="/assets/blog/power/test_electrial_condition.jpg" width={500} height={400} alt="Step 5: Test Electrical Connections" className="w-full h-40 object-cover" /> */}
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Step 5: Test Electrical Connections</h3>
                 <p className="text-gray-600 mt-2">
@@ -72,7 +72,7 @@ const PowerSolutionsElectricalMaintenancePage = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image src="/assets/blog/power/system.jpg" width={500} height={400} alt="Step 6: System Testing" className="w-full h-40 object-cover" />
+              {/* <Image src="/assets/blog/power/system.jpg" width={500} height={400} alt="Step 6: System Testing" className="w-full h-40 object-cover" /> */}
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Step 6: Test System Performance</h3>
                 <p className="text-gray-600 mt-2">

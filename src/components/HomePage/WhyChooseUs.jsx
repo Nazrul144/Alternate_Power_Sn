@@ -28,32 +28,32 @@ const WhyChooseUs = () => {
         className="grid grid-cols-2 lg:grid-cols-6 gap-6 mt-12">
         <div
           className="border-[1px] border-gray-300 rounded-lg flex flex-col items-center p-4 hover:transition-transform transform hover:scale-110">
-          <Image className="mt-6" width={100} height={100} alt="logo" src="/assets/icons/group.svg" />
+          <Image className="mt-6" width={100} height={100} alt="logo" src="/11.svg" />
           <p className="text-center mt-2">Skilled Professionals</p>
         </div>
 
         <div className="border-[1px] border-gray-300 rounded-lg flex flex-col items-center p-4 hover:transition-transform transform hover:scale-110">
-          <Image className="mt-6" width={100} height={100} alt="logo" src="/assets/icons/deliveryt.svg" />
+          <Image className="mt-6" width={100} height={100} alt="logo" src="/17.PNG" />
           <p className="text-center mt-2">On-Time Project Completion</p>
         </div>
 
         <div className="border-[1px] border-gray-300 rounded-lg flex flex-col items-center p-4 hover:transition-transform transform hover:scale-110">
-          <Image width={100} height={100} alt="logo" src="/assets/icons/person.svg" />
+          <Image width={100} height={100} alt="logo" src="/16.svg" />
           <p className="text-center mt-2">24/7 Customer Support</p>
         </div>
 
         <div className="border-[1px] border-gray-300 rounded-lg flex flex-col items-center p-4 hover:transition-transform transform hover:scale-110">
-          <Image className="mt-2" width={100} height={100} alt="logo" src="/assets/icons/Wrench.svg" />
+          <Image className="mt-2" width={100} height={100} alt="logo" src="/11.svg" />
           <p className="text-center mt-2">Top-Quality Equipment</p>
         </div>
 
         <div className="border-[1px] border-gray-300 rounded-lg flex flex-col items-center p-4 hover:transition-transform transform hover:scale-110">
-          <Image width={100} height={100} alt="logo" src="/assets/icons/check.svg" />
+          <Image width={100} height={100} alt="logo" src="/13.svg" />
           <p className="text-center mt-2">Satisfaction Guarantee</p>
         </div>
 
         <div className="border-[1px] border-gray-300 rounded-lg flex flex-col items-center p-4 hover:transition-transform transform hover:scale-110">
-          <Image width={100} height={100} alt="logo" src="/assets/icons/quick.png" />
+          <Image width={100} height={100} alt="logo" src="/14.svg" />
           <p className="text-center mt-8">Fast Response Time</p>
         </div>
 

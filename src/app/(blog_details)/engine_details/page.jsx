@@ -10,7 +10,7 @@ const PowerSolutionsDetails = () => {
           <p className="text-lg text-gray-600 mt-4">
             Regular maintenance of alternate power solutions, particularly systems like solar panels, wind turbines, and energy storage, is essential for ensuring long-term performance, reliability, and energy efficiency. Like any complex system, these energy solutions require attention to prevent wear and tear, avoid costly repairs, and maintain optimal performance.
           </p>
-          <Image src="/assets/blog/power/cover.webp" width={1000} height={800} alt="Alternate Power Systems Maintenance" className="w-full h-64 object-cover mt-6 rounded-lg" />
+          <Image src="/regular.webp" width={1000} height={800} alt="Alternate Power Systems Maintenance" className="w-full h-64 object-cover mt-6 rounded-lg" />
         </div>
 
         <div className="space-y-8">
@@ -22,7 +22,7 @@ const PowerSolutionsDetails = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image src="/assets/blog/power/1.webp" width={500} height={400} alt="Step 1: Prepare Your Tools" className="w-full h-40 object-cover" />
+              {/* <Image src="/assets/blog/power/1.webp" width={500} height={400} alt="Step 1: Prepare Your Tools" className="w-full h-40 object-cover" /> */}
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Step 1: Planning and Preparation</h3>
                 <p className="text-gray-600 mt-2">
@@ -32,7 +32,7 @@ const PowerSolutionsDetails = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image src="/assets/blog/power/2.jpg" width={500} height={400} alt="Step 2: Regular Inspection" className="w-full h-40 object-cover" />
+              {/* <Image src="/power.jpeg" width={500} height={400} alt="Step 2: Regular Inspection" className="w-full h-40 object-cover" /> */}
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Step 2: Regular Inspection</h3>
                 <p className="text-gray-600 mt-2">
@@ -42,7 +42,7 @@ const PowerSolutionsDetails = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image src="/assets/blog/power/3.jpg" width={500} height={400} alt="Step 3: Clean and Maintain Components" className="w-full h-40 object-cover" />
+              {/* <Image src="/assets/blog/power/3.jpg" width={500} height={400} alt="Step 3: Clean and Maintain Components" className="w-full h-40 object-cover" /> */}
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Step 3: Clean and Maintain Components</h3>
                 <p className="text-gray-600 mt-2">
@@ -52,7 +52,7 @@ const PowerSolutionsDetails = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image src="/assets/blog/power/4.jpg" width={500} height={400} alt="Step 4: Replace the Filter" className="w-full h-40 object-cover" />
+              {/* <Image src="/assets/blog/power/4.jpg" width={500} height={400} alt="Step 4: Replace the Filter" className="w-full h-40 object-cover" /> */}
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Step 4: Inspect Inverter and Battery Systems</h3>
                 <p className="text-gray-600 mt-2">
@@ -62,7 +62,7 @@ const PowerSolutionsDetails = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image src="/assets/blog/power/5.png" width={500} height={400} alt="Step 5: Reassemble and Restore Components" className="w-full h-40 object-cover" />
+              {/* <Image src="/assets/blog/power/5.png" width={500} height={400} alt="Step 5: Reassemble and Restore Components" className="w-full h-40 object-cover" /> */}
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Step 5: Reassembly and Component Restoration</h3>
                 <p className="text-gray-600 mt-2">
@@ -72,7 +72,7 @@ const PowerSolutionsDetails = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image src="/assets/blog/power/6.jpg" width={500} height={400} alt="Step 6: System Testing" className="w-full h-40 object-cover" />
+              {/* <Image src="/assets/blog/power/6.jpg" width={500} height={400} alt="Step 6: System Testing" className="w-full h-40 object-cover" /> */}
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Step 6: Testing and Calibration</h3>
                 <p className="text-gray-600 mt-2">

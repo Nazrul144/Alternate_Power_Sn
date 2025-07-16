@@ -10,7 +10,7 @@ const PowerSolutionsDetailsPage = () => {
           <p className="text-lg text-gray-600 mt-4">
             Essential steps for maintaining your renewable energy systems and ensuring long-lasting performance.
           </p>
-          <Image src="/assets/blog/power/alternative.webp" width={1000} height={800} alt="Power Solutions Maintenance Hero" className="w-full h-64 object-cover mt-6 rounded-lg" />
+          <Image src="/energy.webp" width={1000} height={800} alt="Power Solutions Maintenance Hero" className="w-full h-64 object-cover mt-6 rounded-lg" />
         </div>
 
         <div className="space-y-8">
@@ -22,7 +22,7 @@ const PowerSolutionsDetailsPage = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image src="/assets/blog/power/tools.jpg" width={500} height={400} alt="Step 1: Gather Your Tools" className="w-full h-40 object-cover" />
+              {/* <Image src="/assets/blog/power/tools.jpg" width={500} height={400} alt="Step 1: Gather Your Tools" className="w-full h-40 object-cover" /> */}
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Step 1: Gather Your Tools</h3>
                 <p className="text-gray-600 mt-2">
@@ -32,7 +32,7 @@ const PowerSolutionsDetailsPage = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image src="/assets/blog/power/inspection.jpg" width={500} height={400} alt="Step 2: Inspect the System" className="w-full h-40 object-cover" />
+              {/* <Image src="/assets/blog/power/inspection.jpg" width={500} height={400} alt="Step 2: Inspect the System" className="w-full h-40 object-cover" /> */}
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Step 2: Inspect the System</h3>
                 <p className="text-gray-600 mt-2">
@@ -42,7 +42,7 @@ const PowerSolutionsDetailsPage = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image src="/assets/blog/power/3.jpg" width={500} height={400} alt="Step 3: Clean and Maintain Components" className="w-full h-40 object-cover" />
+              {/* <Image src="/assets/blog/power/3.jpg" width={500} height={400} alt="Step 3: Clean and Maintain Components" className="w-full h-40 object-cover" /> */}
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Step 3: Clean and Maintain Components</h3>
                 <p className="text-gray-600 mt-2">
@@ -52,7 +52,7 @@ const PowerSolutionsDetailsPage = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image src="/assets/blog/power/battery.webp" width={500} height={400} alt="Step 4: Inspect Batteries" className="w-full h-40 object-cover" />
+              {/* <Image src="/assets/blog/power/battery.webp" width={500} height={400} alt="Step 4: Inspect Batteries" className="w-full h-40 object-cover" /> */}
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Step 4: Inspect and Test Batteries</h3>
                 <p className="text-gray-600 mt-2">
@@ -62,7 +62,7 @@ const PowerSolutionsDetailsPage = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image src="/assets/blog/power/rep.webp" width={500} height={400} alt="Step 5: Repair Damaged Components" className="w-full h-40 object-cover" />
+              {/* <Image src="/assets/blog/power/rep.webp" width={500} height={400} alt="Step 5: Repair Damaged Components" className="w-full h-40 object-cover" /> */}
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Step 5: Repair Damaged Components</h3>
                 <p className="text-gray-600 mt-2">
@@ -72,7 +72,7 @@ const PowerSolutionsDetailsPage = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image src="/assets/blog/power/6.jpg" width={500} height={400} alt="Step 6: Testing and Calibration" className="w-full h-40 object-cover" />
+              {/* <Image src="/assets/blog/power/6.jpg" width={500} height={400} alt="Step 6: Testing and Calibration" className="w-full h-40 object-cover" /> */}
               <div className="p-6">
                 <h3 className="font-semibold text-lg text-gray-800">Step 6: Testing and Calibration</h3>
                 <p className="text-gray-600 mt-2">

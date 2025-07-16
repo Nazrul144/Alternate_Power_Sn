@@ -28,10 +28,10 @@ const About = () => {
                     }}
                     className='relative lg:mt-24'>
                     <div className='sticky top-[75px]'>
-                        <Image className='rounded-lg max-w-full hidden lg:block' src='/assets/images/about_us/person.jpg' alt='Person' width={600} height={800} />
+                        <Image className='rounded-lg max-w-full hidden lg:block' src='/person.jpg' alt='Person' width={600} height={800} />
                     </div>
                     <div className='absolute top-40 left-[380px]'>
-                        <Image className='border-8 border-white rounded-lg top-20 hidden lg:block' src='/assets/images/about_us/parts.jpg' alt='Parts' width={300} height={300} />
+                        <Image className='border-8 border-white rounded-lg top-20 hidden lg:block' src='/parts.jpg' alt='Parts' width={300} height={300} />
                     </div>
                 </motion.div>
                 <motion.div

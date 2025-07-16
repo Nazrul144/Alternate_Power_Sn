@@ -73,7 +73,7 @@ const Navbar = () => {
                 <a href="tel:+0683193323" className="font-bold"> 068 319 3323</a>
                 
               </h1>
-              <h1 className="font-bold text-sky-700">Open 24/7, 365!</h1>
+              <h1 className="font-bold text-sky-800">Open 24/7, 365!</h1>
             </div>
           </div>
         </div>

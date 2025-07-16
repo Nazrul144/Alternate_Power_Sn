@@ -26,7 +26,7 @@ const Address = () => {
         </div>
         <div className="flex items-center gap-2">
           <div>
-            <Image src="/assets/images/address/Group 34.svg" alt="logo" width={40} height={30} />
+            <Image src="/Group 34.svg" alt="logo" width={40} height={30} />
             <MdAttachEmail className="text-4xl mt-4" />
           </div>
           <div>
@@ -37,7 +37,7 @@ const Address = () => {
         </div>
         <div className="flex items-center gap-2">
           <div>
-            <Image src="/assets/images/address/Group 35.svg" alt="logo" width={40} height={30} />
+            <Image src="/Group 35.svg" alt="logo" width={40} height={30} />
           </div>
           <div>
             <h1>Need a repair? our address</h1>
