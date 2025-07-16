@@ -26,19 +26,19 @@ const Footer = () => {
           </p>
           {/*Social Link*/}
           <div className="flex space-x-4 mt-4">
-            <Link href={"https://www.google.com"}>
+            <Link href={"#"}>
               <FaGoogle className="text-xl text-blue-500" />
             </Link>
-            <Link href={"https://www.facebook.com/profile.php?id=100007196595674"}>
+            <Link href={"#"}>
               <FaFacebook className="text-xl text-sky-400" />
             </Link>
-            <Link href={"https://x.com/Nazrul211002144"}>
+            <Link href={"#"}>
               <FaTwitter className="text-xl" />
             </Link>
-            <Link href={"https://www.instagram.com/mdnazrulmarine/?igsh=MmVlYXcwNXl0enI5#"}>
+            <Link href={"#"}>
               <FaInstagramSquare className="text-xl text-red-600" />
             </Link>
-            <Link href={"https://www.linkedin.com/in/nazrul-islam-a6080730b"}>
+            <Link href={"#"}>
               <FaLinkedin className="text-xl text-sky-500" />
             </Link>
           </div>
