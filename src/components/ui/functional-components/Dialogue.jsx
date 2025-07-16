@@ -137,27 +137,27 @@ const Dialogue = () => {
                 <h1 className="mb-2 font-semibold text-white">What service would you like?</h1>
                 <RadioGroup value={service} onValueChange={setService}>
                   <div className="flex items-center gap-3 text-white">
-                    <RadioGroupItem value="electrical_call" id="r1" name="service" />
+                    <RadioGroupItem value="Electrical Installations & 24/7 Call-Outs" id="r1" name="service" />
                     <Label htmlFor="r1">Electrical Installations & 24/7 Call-Outs</Label>
                   </div>
                   <div className="flex items-center gap-3 text-white">
-                    <RadioGroupItem value="inverter_installtion" id="r2" name="service" />
+                    <RadioGroupItem value="Solar & Battery Backup Systems" id="r2" name="service" />
                     <Label htmlFor="r2">Solar & Battery Backup Systems</Label>
                   </div>
                   <div className="flex items-center gap-3 text-white">
-                    <RadioGroupItem value="solar_installation" id="r3" name="service" />
+                    <RadioGroupItem value="Waterproofing & Roof Repairs" id="r3" name="service" />
                     <Label htmlFor="r3">Waterproofing & Roof Repairs</Label>
                   </div>
                   <div className="flex items-center gap-3 text-white">
-                    <RadioGroupItem value="white_boxing" id="r4" name="service" />
+                    <RadioGroupItem value="White Boxing & Commercial Painting" id="r4" name="service" />
                     <Label htmlFor="r4">White Boxing & Commercial Painting</Label>
                   </div>
                   <div className="flex items-center gap-3 text-white">
-                    <RadioGroupItem value="plumbing_service" id="r5" name="service" />
+                    <RadioGroupItem value="Plumbing Services" id="r5" name="service" />
                     <Label htmlFor="r5">Plumbing Services</Label>
                   </div>
                   <div className="flex items-center gap-3 text-white">
-                    <RadioGroupItem value="carpentry" id="r6" name="service" />
+                    <RadioGroupItem value="Carpentry & Property Maintenance" id="r6" name="service" />
                     <Label htmlFor="r6">Carpentry & Property Maintenance</Label>
                   </div>
                 </RadioGroup>
