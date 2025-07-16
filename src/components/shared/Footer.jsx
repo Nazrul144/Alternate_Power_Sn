@@ -61,12 +61,12 @@ const Footer = () => {
           <Link href={"/team"} className="link link-hover">Meet Our Team</Link>
           <Link href={"/about"} className="link link-hover">About</Link>
         </nav>
-        <nav>
+        {/* <nav>
           <h6 className="footer-title text-xl font-bold">Support</h6>
           <Link href={'/'} className="link link-hover">Support Center</Link>
           <Link href={'/'} className="link link-hover">Feedback</Link>
           <Link href={'/'} className="link link-hover">Accessibility</Link>
-        </nav>
+        </nav> */}
       </motion.footer>
     </div>
   );
