@@ -93,6 +93,7 @@ const About = () => {
                         <Link href="/contact">Contact for Quote & Visit</Link>
                     </Button>
 
+                   
 
                     <h1 className="mt-2 font-bold">Or call us</h1>
                     <a href="tel:+0683193323" className="font-bold text-sky-600 text-xl">068 319 3323</a>

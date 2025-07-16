@@ -5,7 +5,7 @@ import { ImWhatsapp } from "react-icons/im";
 
 const WhatsAppButton = () => {
     const [visible, setVisible] = useState(true);
-    const phoneNumber = '8801886531287';
+    const phoneNumber = '8801762692196';
     const message = encodeURIComponent('Hello APS, I would like to request a quote.');
 
     console.log(`https://wa.me/${phoneNumber}?text=${message}`);
