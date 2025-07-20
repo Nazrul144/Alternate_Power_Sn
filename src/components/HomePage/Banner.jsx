@@ -12,7 +12,7 @@ const Banner = () => {
   const [service, setService] = useState('');
 
   useEffect(() => {
-    emailjs.init(process.env.NEXT_PUBLIC_PUBLIC_ID);
+    emailjs.init('yGO7y0039nyztZLQ');
   }, []);
 
   const sendEmail = (e) => {
@@ -35,8 +35,8 @@ const Banner = () => {
 
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_SERVICE_TEMPLATE_ID,  
+        'service_a5654uh',
+        'template_r00e2p3',  
         formElement
       )
       .then(() => {

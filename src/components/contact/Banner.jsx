@@ -10,7 +10,7 @@ const Banner = () => {
       <div className="w-full h-96 relative mb-12 ">
         <Image
           className="rounded-lg rounded-t-none"
-          src="/assets/images/banner/5.jpg"
+          src="/5.jpg"
           alt="banner"
           layout="fill"
           objectFit="cover"

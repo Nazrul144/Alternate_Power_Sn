@@ -21,7 +21,7 @@ const Dialogue = () => {
   const [service, setService] = useState('');
 
   useEffect(() => {
-    emailjs.init(process.env.NEXT_PUBLIC_PUBLIC_ID);
+    emailjs.init('EyGO7y0039nyztZLQ');
   }, []);
 
   const handleFormSubmit = (e) => {
@@ -45,7 +45,7 @@ const Dialogue = () => {
 
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
+        'service_a5654uh',
         'template_r00e2p3', // your template ID
         formElement
       )

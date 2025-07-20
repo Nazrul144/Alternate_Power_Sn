@@ -10,12 +10,12 @@ const ContactForm = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.init(process.env.NEXT_PUBLIC_PUBLIC_ID); 
+    emailjs.init('EyGO7y0039nyztZLQ'); 
 
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_SERVICE_ID, 
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        'service_a5654uh', 
+       'template_je41myo',
         form.current
       )
       .then(
